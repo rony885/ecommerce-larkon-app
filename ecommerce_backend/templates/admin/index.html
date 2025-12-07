@@ -1,0 +1,13 @@
+{% extends "admin/index.html" %}
+
+{% block sidebar %}
+    <div id="content-related">
+        <!-- We keep the modules except "Recent actions" -->
+        {% for model in app_list %}
+            {# default sidebar content #}
+        {% endfor %}
+        
+        {# Do NOT include recent actions #}
+        {# This removes only Recent actions box #}
+    </div>
+{% endblock %}
