@@ -1,6 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const RoleList = () => {
   return (
@@ -82,27 +82,27 @@ const RoleList = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <a href="#!" className="btn btn-light btn-sm">
+                        <Link to="#!" className="btn btn-light btn-sm">
                           <iconify-icon
                             icon="solar:eye-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a
-                          href="role-edit.html"
+                        </Link>
+                        <Link
+                          to="role-edit.html"
                           className="btn btn-soft-primary btn-sm"
                         >
                           <iconify-icon
                             icon="solar:pen-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a href="#!" className="btn btn-soft-danger btn-sm">
+                        </Link>
+                        <Link to="#!" className="btn btn-soft-danger btn-sm">
                           <iconify-icon
                             icon="solar:trash-bin-minimalistic-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -163,27 +163,27 @@ const RoleList = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <a href="#!" className="btn btn-light btn-sm">
+                        <Link to="#!" className="btn btn-light btn-sm">
                           <iconify-icon
                             icon="solar:eye-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a
-                          href="role-edit.html"
+                        </Link>
+                        <Link
+                          to="role-edit.html"
                           className="btn btn-soft-primary btn-sm"
                         >
                           <iconify-icon
                             icon="solar:pen-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a href="#!" className="btn btn-soft-danger btn-sm">
+                        </Link>
+                        <Link to="#!" className="btn btn-soft-danger btn-sm">
                           <iconify-icon
                             icon="solar:trash-bin-minimalistic-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -228,27 +228,27 @@ const RoleList = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <a href="#!" className="btn btn-light btn-sm">
+                        <Link to="#!" className="btn btn-light btn-sm">
                           <iconify-icon
                             icon="solar:eye-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a
-                          href="role-edit.html"
+                        </Link>
+                        <Link
+                          to="role-edit.html"
                           className="btn btn-soft-primary btn-sm"
                         >
                           <iconify-icon
                             icon="solar:pen-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a href="#!" className="btn btn-soft-danger btn-sm">
+                        </Link>
+                        <Link to="#!" className="btn btn-soft-danger btn-sm">
                           <iconify-icon
                             icon="solar:trash-bin-minimalistic-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -305,27 +305,27 @@ const RoleList = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <a href="#!" className="btn btn-light btn-sm">
+                        <Link to="#!" className="btn btn-light btn-sm">
                           <iconify-icon
                             icon="solar:eye-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a
-                          href="role-edit.html"
+                        </Link>
+                        <Link
+                          to="role-edit.html"
                           className="btn btn-soft-primary btn-sm"
                         >
                           <iconify-icon
                             icon="solar:pen-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a href="#!" className="btn btn-soft-danger btn-sm">
+                        </Link>
+                        <Link to="#!" className="btn btn-soft-danger btn-sm">
                           <iconify-icon
                             icon="solar:trash-bin-minimalistic-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -333,9 +333,9 @@ const RoleList = () => {
                   <tr>
                     <td>Tech Lead</td>
                     <td>
-                      <a href="#!" className="link-primary">
+                      <Link to="#!" className="link-primary">
                         + Add Workspace
-                      </a>
+                      </Link>
                     </td>
                     <td>
                       <span className="badge bg-light-subtle text-muted border py-1 px-2">
@@ -349,9 +349,9 @@ const RoleList = () => {
                       </span>
                     </td>
                     <td>
-                      <a href="#!" className="link-primary">
+                      <Link to="#!" className="link-primary">
                         + Add User
-                      </a>
+                      </Link>
                     </td>
                     <td>
                       <div className="form-check form-switch">
@@ -365,27 +365,27 @@ const RoleList = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <a href="#!" className="btn btn-light btn-sm">
+                        <Link to="#!" className="btn btn-light btn-sm">
                           <iconify-icon
                             icon="solar:eye-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a
-                          href="role-edit.html"
+                        </Link>
+                        <Link
+                          to="role-edit.html"
                           className="btn btn-soft-primary btn-sm"
                         >
                           <iconify-icon
                             icon="solar:pen-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a href="#!" className="btn btn-soft-danger btn-sm">
+                        </Link>
+                        <Link to="#!" className="btn btn-soft-danger btn-sm">
                           <iconify-icon
                             icon="solar:trash-bin-minimalistic-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -442,27 +442,27 @@ const RoleList = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <a href="#!" className="btn btn-light btn-sm">
+                        <Link to="#!" className="btn btn-light btn-sm">
                           <iconify-icon
                             icon="solar:eye-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a
-                          href="role-edit.html"
+                        </Link>
+                        <Link
+                          to="role-edit.html"
                           className="btn btn-soft-primary btn-sm"
                         >
                           <iconify-icon
                             icon="solar:pen-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a href="#!" className="btn btn-soft-danger btn-sm">
+                        </Link>
+                        <Link to="#!" className="btn btn-soft-danger btn-sm">
                           <iconify-icon
                             icon="solar:trash-bin-minimalistic-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -515,27 +515,27 @@ const RoleList = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <a href="#!" className="btn btn-light btn-sm">
+                        <Link to="#!" className="btn btn-light btn-sm">
                           <iconify-icon
                             icon="solar:eye-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a
-                          href="role-edit.html"
+                        </Link>
+                        <Link
+                          to="role-edit.html"
                           className="btn btn-soft-primary btn-sm"
                         >
                           <iconify-icon
                             icon="solar:pen-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a href="#!" className="btn btn-soft-danger btn-sm">
+                        </Link>
+                        <Link to="#!" className="btn btn-soft-danger btn-sm">
                           <iconify-icon
                             icon="solar:trash-bin-minimalistic-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -573,27 +573,27 @@ const RoleList = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <a href="#!" className="btn btn-light btn-sm">
+                        <Link to="#!" className="btn btn-light btn-sm">
                           <iconify-icon
                             icon="solar:eye-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a
-                          href="role-edit.html"
+                        </Link>
+                        <Link
+                          to="role-edit.html"
                           className="btn btn-soft-primary btn-sm"
                         >
                           <iconify-icon
                             icon="solar:pen-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
-                        <a href="#!" className="btn btn-soft-danger btn-sm">
+                        </Link>
+                        <Link to="#!" className="btn btn-soft-danger btn-sm">
                           <iconify-icon
                             icon="solar:trash-bin-minimalistic-2-broken"
                             className="align-middle fs-18"
                           ></iconify-icon>
-                        </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -612,29 +612,29 @@ const RoleList = () => {
             <div className="col-sm-auto mt-3 mt-sm-0">
               <ul className="pagination m-0">
                 <li className="page-item">
-                  <a href="#" className="page-link">
+                  <Link to="#" className="page-link">
                     <i className="bx bx-left-arrow-alt"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li className="page-item active">
-                  <a href="#" className="page-link">
+                  <Link to="#" className="page-link">
                     1
-                  </a>
+                  </Link>
                 </li>
                 <li className="page-item">
-                  <a href="#" className="page-link">
+                  <Link to="#" className="page-link">
                     2
-                  </a>
+                  </Link>
                 </li>
                 <li className="page-item">
-                  <a href="#" className="page-link">
+                  <Link to="#" className="page-link">
                     3
-                  </a>
+                  </Link>
                 </li>
                 <li className="page-item">
-                  <a href="#" className="page-link">
+                  <Link to="#" className="page-link">
                     <i className="bx bx-right-arrow-alt"></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

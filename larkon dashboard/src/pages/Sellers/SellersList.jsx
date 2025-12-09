@@ -1,7 +1,6 @@
-/* eslint-disable no-script-url */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const SellersList = () => {
   return (
@@ -19,8 +18,8 @@ const SellersList = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -29,19 +28,19 @@ const SellersList = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -53,9 +52,9 @@ const SellersList = () => {
                       <span className="text-muted fs-13 ms-1">(Fashion)</span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.zarafashion.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -133,18 +132,18 @@ const SellersList = () => {
                 </div>
               </div>
               <div className="card-footer border-top gap-1 hstack">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   View Profile
-                </a>
-                <a href="#!" className="btn btn-light w-100">
+                </Link>
+                <Link to="#!" className="btn btn-light w-100">
                   Edit Profile
-                </a>
-                <a
-                  href="#!"
+                </Link>
+                <Link
+                  to="#!"
                   className="btn btn-soft-danger d-inline-flex align-items-center justify-content-center rounded-circle avatar-sm"
                 >
                   <i className="bx bx-heart fs-4 align-middle"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -159,8 +158,8 @@ const SellersList = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -169,19 +168,19 @@ const SellersList = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -193,9 +192,9 @@ const SellersList = () => {
                       <span className="text-muted fs-13 ms-1">(Watch)</span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.rolexwatch.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -273,18 +272,18 @@ const SellersList = () => {
                 </div>
               </div>
               <div className="card-footer border-top gap-1 hstack">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   View Profile
-                </a>
-                <a href="#!" className="btn btn-light w-100">
+                </Link>
+                <Link to="#!" className="btn btn-light w-100">
                   Edit Profile
-                </a>
-                <a
-                  href="#!"
+                </Link>
+                <Link
+                  to="#!"
                   className="btn btn-soft-danger d-inline-flex align-items-center justify-content-center rounded-circle avatar-sm"
                 >
                   <i className="bx bx-heart fs-4 align-middle"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -299,8 +298,8 @@ const SellersList = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -309,19 +308,19 @@ const SellersList = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -330,12 +329,14 @@ const SellersList = () => {
                   <div>
                     <h4 className="mb-1">
                       Dyson Machinery
-                      <span className="text-muted fs-13 ms-1">(Electronics)</span>
+                      <span className="text-muted fs-13 ms-1">
+                        (Electronics)
+                      </span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.dysonmachine.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -413,18 +414,18 @@ const SellersList = () => {
                 </div>
               </div>
               <div className="card-footer border-top gap-1 hstack">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   View Profile
-                </a>
-                <a href="#!" className="btn btn-light w-100">
+                </Link>
+                <Link to="#!" className="btn btn-light w-100">
                   Edit Profile
-                </a>
-                <a
-                  href="#!"
+                </Link>
+                <Link
+                  to="#!"
                   className="btn btn-soft-danger d-inline-flex align-items-center justify-content-center rounded-circle avatar-sm"
                 >
                   <i className="bx bx-heart fs-4 align-middle"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -439,8 +440,8 @@ const SellersList = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -449,19 +450,19 @@ const SellersList = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -470,12 +471,14 @@ const SellersList = () => {
                   <div>
                     <h4 className="mb-1">
                       GoPro Camera
-                      <span className="text-muted fs-13 ms-1">(Electronics)</span>
+                      <span className="text-muted fs-13 ms-1">
+                        (Electronics)
+                      </span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.goprocamera.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -553,18 +556,18 @@ const SellersList = () => {
                 </div>
               </div>
               <div className="card-footer border-top gap-1 hstack">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   View Profile
-                </a>
-                <a href="#!" className="btn btn-light w-100">
+                </Link>
+                <Link to="#!" className="btn btn-light w-100">
                   Edit Profile
-                </a>
-                <a
-                  href="#!"
+                </Link>
+                <Link
+                  to="#!"
                   className="btn btn-soft-danger d-inline-flex align-items-center justify-content-center rounded-circle avatar-sm"
                 >
                   <i className="bx bx-heart fs-4 align-middle"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -579,8 +582,8 @@ const SellersList = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -589,19 +592,19 @@ const SellersList = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -609,12 +612,13 @@ const SellersList = () => {
                 <div className="d-flex flex-wrap justify-content-between my-3">
                   <div>
                     <h4 className="mb-1">
-                      H&M<span className="text-muted fs-13 ms-1">(Fashion) </span>
+                      H&M
+                      <span className="text-muted fs-13 ms-1">(Fashion) </span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.h&mfashion.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -692,18 +696,18 @@ const SellersList = () => {
                 </div>
               </div>
               <div className="card-footer border-top gap-1 hstack">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   View Profile
-                </a>
-                <a href="#!" className="btn btn-light w-100">
+                </Link>
+                <Link to="#!" className="btn btn-light w-100">
                   Edit Profile
-                </a>
-                <a
-                  href="#!"
+                </Link>
+                <Link
+                  to="#!"
                   className="btn btn-soft-danger d-inline-flex align-items-center justify-content-center rounded-circle avatar-sm"
                 >
                   <i className="bx bx-heart fs-4 align-middle"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -718,8 +722,8 @@ const SellersList = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -728,19 +732,19 @@ const SellersList = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -749,12 +753,14 @@ const SellersList = () => {
                   <div>
                     <h4 className="mb-1">
                       Huawei Phone
-                      <span className="text-muted fs-13 ms-1">(Electronics)</span>
+                      <span className="text-muted fs-13 ms-1">
+                        (Electronics)
+                      </span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.huaweiphone.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -832,18 +838,18 @@ const SellersList = () => {
                 </div>
               </div>
               <div className="card-footer border-top gap-1 hstack">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   View Profile
-                </a>
-                <a href="#!" className="btn btn-light w-100">
+                </Link>
+                <Link to="#!" className="btn btn-light w-100">
                   Edit Profile
-                </a>
-                <a
-                  href="#!"
+                </Link>
+                <Link
+                  to="#!"
                   className="btn btn-soft-danger d-inline-flex align-items-center justify-content-center rounded-circle avatar-sm"
                 >
                   <i className="bx bx-heart fs-4 align-middle"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -858,8 +864,8 @@ const SellersList = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -868,19 +874,19 @@ const SellersList = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -892,9 +898,9 @@ const SellersList = () => {
                       <span className="text-muted fs-13 ms-1">(Fashion)</span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.nikebrand.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -972,18 +978,18 @@ const SellersList = () => {
                 </div>
               </div>
               <div className="card-footer border-top gap-1 hstack">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   View Profile
-                </a>
-                <a href="#!" className="btn btn-light w-100">
+                </Link>
+                <Link to="#!" className="btn btn-light w-100">
                   Edit Profile
-                </a>
-                <a
-                  href="#!"
+                </Link>
+                <Link
+                  to="#!"
                   className="btn btn-soft-danger d-inline-flex align-items-center justify-content-center rounded-circle avatar-sm"
                 >
                   <i className="bx bx-heart fs-4 align-middle"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -998,8 +1004,8 @@ const SellersList = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -1008,19 +1014,19 @@ const SellersList = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1032,9 +1038,9 @@ const SellersList = () => {
                       <span className="text-muted fs-13 ms-1">(Fashion)</span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.northface.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -1112,18 +1118,18 @@ const SellersList = () => {
                 </div>
               </div>
               <div className="card-footer border-top gap-1 hstack">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   View Profile
-                </a>
-                <a href="#!" className="btn btn-light w-100">
+                </Link>
+                <Link to="#!" className="btn btn-light w-100">
                   Edit Profile
-                </a>
-                <a
-                  href="#!"
+                </Link>
+                <Link
+                  to="#!"
                   className="btn btn-soft-danger d-inline-flex align-items-center justify-content-center rounded-circle avatar-sm"
                 >
                   <i className="bx bx-heart fs-4 align-middle"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

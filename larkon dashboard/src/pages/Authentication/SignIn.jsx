@@ -90,51 +90,6 @@ const SignIn = () => {
                       onSubmit={handleSubmit}
                       className="authentication-form"
                     >
-                      {/* <div className="mb-3">
-                        <label className="form-label" for="example-email">
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          id="example-email"
-                          name="example-email"
-                          className="form-control bg-"
-                          placeholder="Enter your email"
-                        />
-                      </div>
-                      <div className="mb-3">
-                        <Link
-                          to="auth-password.html"
-                          className="float-end text-muted text-unline-dashed ms-1"
-                        >
-                          Reset password
-                        </Link>
-                        <label className="form-label" for="example-password">
-                          Password
-                        </label>
-                        <input
-                          type="text"
-                          id="example-password"
-                          className="form-control"
-                          placeholder="Enter your password"
-                        />
-                      </div>
-                      <div className="mb-3">
-                        <div className="form-check">
-                          <input
-                            type="checkbox"
-                            className="form-check-input"
-                            id="checkbox-signin"
-                          />
-                          <label
-                            className="form-check-label"
-                            for="checkbox-signin"
-                          >
-                            Remember me
-                          </label>
-                        </div>
-                      </div> */}
-
                       {error && <p className="text-danger">{error}</p>}
 
                       <input

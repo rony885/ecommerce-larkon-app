@@ -1,8 +1,6 @@
-/* eslint-disable no-script-url */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import React from "react";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const ProductGrid = () => {
   return (
@@ -27,8 +25,8 @@ const ProductGrid = () => {
             </div>
             <div className="card">
               <div className="card-body border-light">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="btn-link d-flex align-items-center text-dark bg-light p-2 rounded fw-medium fs-16 mb-0"
                   data-bs-toggle="collapse"
                   data-bs-target="#categories"
@@ -37,7 +35,7 @@ const ProductGrid = () => {
                 >
                   Categories
                   <i className="bx bx-chevron-down ms-auto fs-20"></i>
-                </a>
+                </Link>
                 <div id="categories" className="collapse show">
                   <div className="categories-list d-flex flex-column gap-2 mt-2">
                     <div className="form-check">
@@ -163,8 +161,8 @@ const ProductGrid = () => {
                 </div>
 
                 <div className="mt-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="btn-link d-flex align-items-center text-dark bg-light p-2 rounded fw-medium fs-16 mb-0"
                     data-bs-toggle="collapse"
                     data-bs-target="#price"
@@ -173,7 +171,7 @@ const ProductGrid = () => {
                   >
                     Product Price
                     <i className="bx bx-chevron-down ms-auto fs-20"></i>
-                  </a>
+                  </Link>
                   <div id="price" className="collapse show">
                     <div className="categories-list d-flex flex-column gap-2 mt-2">
                       <div className="form-check">
@@ -265,8 +263,8 @@ const ProductGrid = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="btn-link d-flex align-items-center text-dark bg-light p-2 rounded fw-medium fs-16 mb-0"
                     data-bs-toggle="collapse"
                     data-bs-target="#gender"
@@ -275,7 +273,7 @@ const ProductGrid = () => {
                   >
                     Gender
                     <i className="bx bx-chevron-down ms-auto fs-20"></i>
-                  </a>
+                  </Link>
                   <div id="gender" className="collapse show">
                     <div className="categories-list d-flex flex-column gap-2 mt-2">
                       <div className="form-check">
@@ -312,8 +310,8 @@ const ProductGrid = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="btn-link d-flex align-items-center text-dark bg-light p-2 rounded fw-medium fs-16 mb-0"
                     data-bs-toggle="collapse"
                     data-bs-target="#size"
@@ -322,7 +320,7 @@ const ProductGrid = () => {
                   >
                     Size & Fit
                     <i className="bx bx-chevron-down ms-auto fs-20"></i>
-                  </a>
+                  </Link>
                   <div id="size" className="collapse show">
                     <p className="text-muted mt-1">
                       "For better results, select gender and category"
@@ -378,15 +376,15 @@ const ProductGrid = () => {
                           XXL (1,099)
                         </label>
                       </div>
-                      <a href="#!" className="text-dark fw-medium">
+                      <Link to="#!" className="text-dark fw-medium">
                         More
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
                 <div className="mt-3">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="btn-link d-flex align-items-center text-dark bg-light p-2 rounded fw-medium fs-16 mb-0"
                     data-bs-toggle="collapse"
                     data-bs-target="#rating"
@@ -395,7 +393,7 @@ const ProductGrid = () => {
                   >
                     Rating
                     <i className="bx bx-chevron-down ms-auto fs-20"></i>
-                  </a>
+                  </Link>
                   <div id="rating" className="collapse show">
                     <div className="categories-list d-flex flex-column gap-2 mt-2">
                       <div className="form-check">
@@ -451,9 +449,9 @@ const ProductGrid = () => {
                 </div>
               </div>
               <div className="card-footer">
-                <a href="#!" className="btn btn-primary w-100">
+                <Link to="#!" className="btn btn-primary w-100">
                   Apply
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -465,9 +463,9 @@ const ProductGrid = () => {
                   <div className="col-lg-6">
                     <ol className="breadcrumb mb-0">
                       <li className="breadcrumb-item fw-medium">
-                        <a href="javascript: void(0);" className="text-dark">
+                        <Link to="#" className="text-dark">
                           Categories
-                        </a>
+                        </Link>
                       </li>
                       <li className="breadcrumb-item active">All Product</li>
                     </ol>
@@ -491,12 +489,12 @@ const ProductGrid = () => {
                       >
                         <i className="bx bx-filter-alt me-1"></i> Filters
                       </button>
-                      <a
-                        href="product-add.html"
+                      <Link
+                        to="product-add.html"
                         className="btn btn-success me-1"
                       >
                         <i className="bx bx-plus"></i> New Product
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -511,12 +509,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Men Black Slim Fit T-shirt
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -551,35 +549,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -601,12 +599,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Olive Green Leather Bag
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -641,35 +639,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -692,12 +690,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Women Golden Dress
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -732,35 +730,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -782,12 +780,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Gray Cap For Men
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -822,35 +820,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -872,12 +870,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Dark Green Cargo Pent
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -912,35 +910,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -962,12 +960,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Orange Headphone
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -1002,35 +1000,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1052,12 +1050,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Kid's Yellow Shoes
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -1092,35 +1090,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1142,12 +1140,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Men Dark Brown Wallet
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -1182,35 +1180,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1232,12 +1230,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Sky Blue Mat Sunglass
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -1272,35 +1270,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1322,12 +1320,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Kid's Yellow T-shirt
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -1362,35 +1360,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1412,12 +1410,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       White Rubber Smart Watch
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -1452,35 +1450,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1502,12 +1500,12 @@ const ProductGrid = () => {
                     className="img-fluid"
                   />
                   <div className="card-body bg-light-subtle rounded-bottom">
-                    <a
-                      href="product-details.html"
+                    <Link
+                      to="product-details.html"
                       className="text-dark fw-medium fs-16"
                     >
                       Men Brown Leather Shoes
-                    </a>
+                    </Link>
                     <div className="my-1">
                       <div className="d-flex gap-2 align-items-center">
                         <ul className="d-flex text-warning m-0 fs-18 list-unstyled">
@@ -1542,35 +1540,35 @@ const ProductGrid = () => {
                     <div className="mt-3">
                       <div className="d-flex gap-2">
                         <div className="dropdown">
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             className="btn btn-soft-primary border border-primary-subtle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="bx bx-dots-horizontal-rounded"></i>
-                          </a>
+                          </Link>
                           <div className="dropdown-menu">
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Edit
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Overview
-                            </a>
+                            </Link>
 
-                            <a href="#!" className="dropdown-item">
+                            <Link to="#!" className="dropdown-item">
                               Delete
-                            </a>
+                            </Link>
                           </div>
                         </div>
-                        <a
-                          href="order-cart.html"
+                        <Link
+                          to="order-cart.html"
                           className="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"
                         >
                           <i className="bx bx-cart align-middle"></i> Add To
                           Cart
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -1590,29 +1588,29 @@ const ProductGrid = () => {
               <nav aria-label="Page navigation example">
                 <ul className="pagination justify-content-end mb-0">
                   <li className="page-item">
-                    <a className="page-link" href="javascript:void(0);">
+                    <Link className="page-link" to="#">
                       Previous
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item active">
-                    <a className="page-link" href="javascript:void(0);">
+                    <Link className="page-link" to="#">
                       1
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item">
-                    <a className="page-link" href="javascript:void(0);">
+                    <Link className="page-link" to="#">
                       2
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item">
-                    <a className="page-link" href="javascript:void(0);">
+                    <Link className="page-link" to="#">
                       3
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item">
-                    <a className="page-link" href="javascript:void(0);">
+                    <Link className="page-link" to="#">
                       Next
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>

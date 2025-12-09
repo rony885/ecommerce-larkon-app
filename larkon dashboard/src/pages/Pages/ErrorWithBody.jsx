@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const ErrorWithBody = () => {
   return (
@@ -9,21 +9,21 @@ const ErrorWithBody = () => {
             <div className="row align-items-center justify-content-center h-100">
               <div className="col-lg-10">
                 <div className="auth-logo mb-3 text-center">
-                  <a href="index.html" className="logo-dark">
+                  <Link to="/" className="logo-dark">
                     <img
-                      src="assets/images/logo-dark.png"
+                      src="/assets/images/logo-dark.png"
                       height="24"
                       alt="logo dark"
                     />
-                  </a>
+                  </Link>
 
-                  <a href="index.html" className="logo-light">
+                  <Link to="/" className="logo-light">
                     <img
-                      src="assets/images/logo-light.png"
+                      src="/assets/images/logo-light.png"
                       height="24"
                       alt="logo light"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="mx-auto text-center">
                   <img
@@ -40,9 +40,9 @@ const ErrorWithBody = () => {
                   suggest that you return to main sections
                 </p>
                 <div className="text-center">
-                  <a href="index.html" className="btn btn-primary">
+                  <Link to="/" className="btn btn-primary">
                     Back To Home
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@ const ErrorWithBody = () => {
             <div className="card h-100 mb-0 overflow-hidden">
               <div className="d-flex flex-column h-100">
                 <img
-                  src="assets/images/small/img-10.jpg"
+                  src="/assets/images/small/img-10.jpg"
                   alt=""
                   className="w-100 h-100"
                 />

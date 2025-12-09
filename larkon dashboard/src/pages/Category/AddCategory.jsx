@@ -93,7 +93,10 @@ const AddCategory = () => {
                     </Link>{" "}
                     | Category Add
                   </h4>
-                  <Link to="/category-list" className="btn btn-sm btn-primary fs-4">
+                  <Link
+                    to="/category-list"
+                    className="btn btn-sm btn-primary fs-4"
+                  >
                     Category List
                   </Link>
                 </div>

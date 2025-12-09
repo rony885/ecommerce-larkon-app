@@ -1,7 +1,6 @@
-/* eslint-disable no-script-url */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const PurchasesList = () => {
   return (
@@ -15,24 +14,24 @@ const PurchasesList = () => {
                   <h4 className="card-title">All Purchase Items</h4>
                 </div>
                 <div className="dropdown">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="dropdown-toggle btn btn-sm btn-outline-light rounded"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     This Month
-                  </a>
+                  </Link>
                   <div className="dropdown-menu dropdown-menu-end">
-                    <a href="#!" className="dropdown-item">
+                    <Link to="#!" className="dropdown-item">
                       Download
-                    </a>
-                    <a href="#!" className="dropdown-item">
+                    </Link>
+                    <Link to="#!" className="dropdown-item">
                       Export
-                    </a>
-                    <a href="#!" className="dropdown-item">
+                    </Link>
+                    <Link to="#!" className="dropdown-item">
                       Import
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -83,9 +82,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV2540
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -111,14 +110,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               // data-bs-toggle="modal"
                               // data-bs-target="#staticBackdrop"
@@ -127,13 +126,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -155,9 +157,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV3924
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -183,14 +185,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               // data-bs-toggle="modal"
                               // data-bs-target="#staticBackdrop"
@@ -199,13 +201,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -227,9 +232,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV5032
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -255,14 +260,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               data-bs-toggle="modal"
                               data-bs-target="#staticBackdrop"
@@ -271,13 +276,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -298,9 +306,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV1695
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -326,14 +334,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               data-bs-toggle="modal"
                               data-bs-target="#staticBackdrop"
@@ -342,13 +350,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -369,9 +380,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV8473
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -397,14 +408,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               data-bs-toggle="modal"
                               data-bs-target="#staticBackdrop"
@@ -413,13 +424,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -440,9 +454,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV2150
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -468,14 +482,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               data-bs-toggle="modal"
                               data-bs-target="#staticBackdrop"
@@ -484,13 +498,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -511,9 +528,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV5636
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -539,14 +556,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               data-bs-toggle="modal"
                               data-bs-target="#staticBackdrop"
@@ -555,13 +572,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -582,9 +602,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV2940
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -610,14 +630,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               data-bs-toggle="modal"
                               data-bs-target="#staticBackdrop"
@@ -626,13 +646,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -653,9 +676,9 @@ const PurchasesList = () => {
                           </div>
                         </td>
                         <td>
-                          <a href="javascript: void(0);" className="text-body">
+                          <Link to="#" className="text-body">
                             #INV9027
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img
@@ -681,14 +704,14 @@ const PurchasesList = () => {
                         </td>
                         <td>
                           <div className="d-flex gap-2">
-                            <a href="#!" className="btn btn-light btn-sm">
+                            <Link to="#!" className="btn btn-light btn-sm">
                               <iconify-icon
                                 icon="solar:eye-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a
-                              href="#!"
+                            </Link>
+                            <Link
+                              to="#!"
                               className="btn btn-soft-primary btn-sm"
                               data-bs-toggle="modal"
                               data-bs-target="#staticBackdrop"
@@ -697,13 +720,16 @@ const PurchasesList = () => {
                                 icon="solar:pen-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
-                            <a href="#!" className="btn btn-soft-danger btn-sm">
+                            </Link>
+                            <Link
+                              to="#!"
+                              className="btn btn-soft-danger btn-sm"
+                            >
                               <iconify-icon
                                 icon="solar:trash-bin-minimalistic-2-broken"
                                 className="align-middle fs-18"
                               ></iconify-icon>
-                            </a>
+                            </Link>
                           </div>
                         </td>
                       </tr>
@@ -717,29 +743,29 @@ const PurchasesList = () => {
                 <nav aria-label="Page navigation example">
                   <ul className="pagination justify-content-end mb-0">
                     <li className="page-item">
-                      <a className="page-link" href="javascript:void(0);">
+                      <Link className="page-link" to="#">
                         Previous
-                      </a>
+                      </Link>
                     </li>
                     <li className="page-item active">
-                      <a className="page-link" href="javascript:void(0);">
+                      <Link className="page-link" to="#">
                         1
-                      </a>
+                      </Link>
                     </li>
                     <li className="page-item">
-                      <a className="page-link" href="javascript:void(0);">
+                      <Link className="page-link" to="#">
                         2
-                      </a>
+                      </Link>
                     </li>
                     <li className="page-item">
-                      <a className="page-link" href="javascript:void(0);">
+                      <Link className="page-link" to="#">
                         3
-                      </a>
+                      </Link>
                     </li>
                     <li className="page-item">
-                      <a className="page-link" href="javascript:void(0);">
+                      <Link className="page-link" to="#">
                         Next
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>

@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const OrderDetails = () => {
   return (
@@ -28,15 +29,15 @@ const OrderDetails = () => {
                         </p>
                       </div>
                       <div>
-                        <a href="#!" className="btn btn-outline-secondary">
+                        <Link to="#!" className="btn btn-outline-secondary">
                           Refund
-                        </a>
-                        <a href="#!" className="btn btn-outline-secondary">
+                        </Link>
+                        <Link to="#!" className="btn btn-outline-secondary">
                           Return
-                        </a>
-                        <a href="#!" className="btn btn-primary">
+                        </Link>
+                        <Link to="#!" className="btn btn-primary">
                           Edit Order
-                        </a>
+                        </Link>
                       </div>
                     </div>
 
@@ -141,9 +142,9 @@ const OrderDetails = () => {
                       <span className="text-dark fw-medium">Apr 25 , 2024</span>
                     </p>
                     <div>
-                      <a href="#!" className="btn btn-primary">
+                      <Link to="#!" className="btn btn-primary">
                         Make As Ready To Ship
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -176,12 +177,12 @@ const OrderDetails = () => {
                                   />
                                 </div>
                                 <div>
-                                  <a
-                                    href="#!"
+                                  <Link
+                                    to="#!"
                                     className="text-dark fw-medium fs-15"
                                   >
                                     Men Black Slim Fit T-shirt
-                                  </a>
+                                  </Link>
                                   <p className="text-muted mb-0 mt-1 fs-13">
                                     <span>Size : </span>M
                                   </p>
@@ -211,12 +212,12 @@ const OrderDetails = () => {
                                   />
                                 </div>
                                 <div>
-                                  <a
-                                    href="#!"
+                                  <Link
+                                    to="#!"
                                     className="text-dark fw-medium fs-15"
                                   >
                                     Dark Green Cargo Pent
-                                  </a>
+                                  </Link>
                                   <p className="text-muted mb-0 mt-1 fs-13">
                                     <span>Size : </span>M
                                   </p>
@@ -246,12 +247,12 @@ const OrderDetails = () => {
                                   />
                                 </div>
                                 <div>
-                                  <a
-                                    href="#!"
+                                  <Link
+                                    to="#!"
                                     className="text-dark fw-medium fs-15"
                                   >
                                     Men Dark Brown Wallet
-                                  </a>
+                                  </Link>
                                   <p className="text-muted mb-0 mt-1 fs-13">
                                     <span>Size : </span>S
                                   </p>
@@ -281,12 +282,12 @@ const OrderDetails = () => {
                                   />
                                 </div>
                                 <div>
-                                  <a
-                                    href="#!"
+                                  <Link
+                                    to="#!"
                                     className="text-dark fw-medium fs-15"
                                   >
                                     Kid's Yellow T-shirt
-                                  </a>
+                                  </Link>
                                   <p className="text-muted mb-0 mt-1 fs-13">
                                     <span>Size : </span>S{" "}
                                   </p>
@@ -353,13 +354,13 @@ const OrderDetails = () => {
                               </h5>
                               <p className="mb-2">
                                 Invoice email was sent to{" "}
-                                <a href="#!" className="link-primary">
+                                <Link to="#!" className="link-primary">
                                   hello@dundermuffilin.com
-                                </a>
+                                </Link>
                               </p>
-                              <a href="#!" className="btn btn-light">
+                              <Link to="#!" className="btn btn-light">
                                 Resend Invoice
-                              </a>
+                              </Link>
                             </div>
                             <p className="mb-0">April 23, 2024, 09:40 am</p>
                           </div>
@@ -378,9 +379,9 @@ const OrderDetails = () => {
                               <p className="mb-2">
                                 Invoice created by Gaston Lapierre
                               </p>
-                              <a href="#!" className="btn btn-primary">
+                              <Link to="#!" className="btn btn-primary">
                                 Download Invoice
-                              </a>
+                              </Link>
                             </div>
                             <p className="mb-0">April 23, 2024, 09:40 am</p>
                           </div>
@@ -420,30 +421,30 @@ const OrderDetails = () => {
                               <h5 className="mb-2 text-dark fw-medium fs-15">
                                 4 Order conform by Gaston Lapierre
                               </h5>
-                              <a
-                                href="#!"
+                              <Link
+                                to="#!"
                                 className="badge bg-light text-dark fw-normal  px-2 py-1 fs-13"
                               >
                                 Order 1
-                              </a>
-                              <a
-                                href="#!"
+                              </Link>
+                              <Link
+                                to="#!"
                                 className="badge bg-light text-dark fw-normal  px-2 py-1 fs-13"
                               >
                                 Order 2
-                              </a>
-                              <a
-                                href="#!"
+                              </Link>
+                              <Link
+                                to="#!"
                                 className="badge bg-light text-dark fw-normal  px-2 py-1 fs-13"
                               >
                                 Order 3
-                              </a>
-                              <a
-                                href="#!"
+                              </Link>
+                              <Link
+                                to="#!"
                                 className="badge bg-light text-dark fw-normal  px-2 py-1 fs-13"
                               >
                                 Order 4
-                              </a>
+                              </Link>
                             </div>
                             <p className="mb-0">April 23, 2024, 09:40 am</p>
                           </div>
@@ -653,17 +654,17 @@ const OrderDetails = () => {
                   />
                   <div>
                     <p className="mb-1">Gaston Lapierre</p>
-                    <a href="#!" className="link-primary fw-medium">
+                    <Link to="#!" className="link-primary fw-medium">
                       hello@dundermuffilin.com
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between mt-3">
                   <h5 className="">Contact Number</h5>
                   <div>
-                    <a href="#!">
+                    <Link to="#!">
                       <i className="bx bx-edit-alt fs-18"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <p className="mb-1">(723) 732-760-5760</p>
@@ -671,9 +672,9 @@ const OrderDetails = () => {
                 <div className="d-flex justify-content-between mt-3">
                   <h5 className="">Shipping Address</h5>
                   <div>
-                    <a href="#!">
+                    <Link to="#!">
                       <i className="bx bx-edit-alt fs-18"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -688,9 +689,9 @@ const OrderDetails = () => {
                 <div className="d-flex justify-content-between mt-3">
                   <h5 className="">Billing Address</h5>
                   <div>
-                    <a href="#!">
+                    <Link to="#!">
                       <i className="bx bx-edit-alt fs-18"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

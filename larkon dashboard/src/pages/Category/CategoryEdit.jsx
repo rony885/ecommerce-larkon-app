@@ -227,7 +227,7 @@ const CategoryEdit = () => {
                             </Form.Group>
                           </div>
                         </div>
-                        
+
                         <div className="p-3 mt-3 rounded">
                           <div className="row justify-content-end g-2">
                             <div className="col-lg-2">

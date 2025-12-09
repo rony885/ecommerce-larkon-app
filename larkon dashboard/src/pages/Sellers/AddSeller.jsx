@@ -1,7 +1,6 @@
-/* eslint-disable no-script-url */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const AddSeller = () => {
   return (
@@ -19,8 +18,8 @@ const AddSeller = () => {
                   />
                   <div className="position-absolute top-0 end-0 m-1">
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="dropdown-toggle arrow-none card-drop"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -29,19 +28,19 @@ const AddSeller = () => {
                           icon="iconamoon:menu-kebab-vertical-circle-duotone"
                           className="fs-20 align-middle text-muted"
                         ></iconify-icon>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Download
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Export
-                        </a>
+                        </Link>
 
-                        <a href="javascript:void(0);" className="dropdown-item">
+                        <Link to="#" className="dropdown-item">
                           Import
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -53,9 +52,9 @@ const AddSeller = () => {
                       <span className="text-muted fs-13 ms-1">(Fashion)</span>
                     </h4>
                     <div>
-                      <a href="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#!" className="link-primary fs-16 fw-medium">
                         www.zarafashion.co
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -191,7 +190,10 @@ const AddSeller = () => {
 
                   <div className="col-lg-6">
                     <form>
-                      <label htmlFor="product-categories" className="form-label">
+                      <label
+                        htmlFor="product-categories"
+                        className="form-label"
+                      >
                         Product Categories
                       </label>
                       <select
@@ -202,7 +204,7 @@ const AddSeller = () => {
                         data-placeholder="Select Categories"
                         name="choices-single-groups"
                       >
-                        <option defaultValue="">Choose a categories</option>
+                        <option defaultValue="">Choose Link categories</option>
                         <option defaultValue="Fashion">Fashion</option>
                         <option defaultValue="Electronics">Electronics</option>
                         <option defaultValue="Footwear">Footwear</option>
@@ -385,14 +387,14 @@ const AddSeller = () => {
             <div className="p-3 bg-light mb-3 rounded">
               <div className="row justify-content-end g-2">
                 <div className="col-lg-2">
-                  <a href="#!" className="btn btn-outline-secondary w-100">
+                  <Link to="#!" className="btn btn-outline-secondary w-100">
                     Save Change
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-lg-2">
-                  <a href="#!" className="btn btn-primary w-100">
+                  <Link to="#!" className="btn btn-primary w-100">
                     Cancel
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
