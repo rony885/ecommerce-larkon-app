@@ -260,9 +260,10 @@
 
 // export default App;
 
+import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./App.css";
+
 import Header from "./components/Header/Header";
 import ActivityTimeline from "./components/ActivityTimeline/ActivityTimeline";
 import SidebarTheme from "./components/SidebarTheme/SidebarTheme";
@@ -324,21 +325,21 @@ import { useApiContext } from "./context/ApiContext";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSidebarEnabled, setIsSidebarEnabled] = useState(false);
-  const [currentUser, setCurrentUser] = useState(null);
+  // const [currentUser, setCurrentUser] = useState(null);
 
   // ✅ Load user & token from localStorage
-  const accessToken = localStorage.getItem(
-    "ecommerceSuperuserandstaffAccessToken"
-  );
+  // const accessToken = localStorage.getItem(
+  //   "ecommerceSuperuserandstaffAccessToken"
+  // );
 
-  useEffect(() => {
-    const user = localStorage.getItem("user");
-    if (user) setCurrentUser(JSON.parse(user));
+  // useEffect(() => {
+  //   const user = localStorage.getItem("user");
+  //   if (user) setCurrentUser(JSON.parse(user));
 
-    // Fake loader
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  //   // Fake loader
+  //   const timer = setTimeout(() => setIsLoading(false), 1000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   const htmlElement = document.documentElement;
   const bodyElement = document.body;
@@ -358,35 +359,69 @@ function App() {
     }
   };
 
+  // Logout user
+  // const logoutUser = async () => {
+  //   try {
+  //     const refresh = localStorage.getItem(
+  //       "ecommerceSuperuserandstaffRefreshToken"
+  //     );
+
+  //     await fetch(`${process.env.REACT_APP_BASE_URL}/custom_user/logout/`, {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ refresh_token: refresh }),
+  //     });
+
+  //     localStorage.removeItem("ecommerceSuperuserandstaffAccessToken");
+  //     localStorage.removeItem("ecommerceSuperuserandstaffRefreshToken");
+  //     localStorage.removeItem("user");
+
+  //     setCurrentUser(null); // clear current user
+  //     window.location.href = "/sign-in";
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
+
+  const { c_user } = useApiContext();
+  const aT = localStorage.getItem("ecommerceSuperuserandstaffAccessToken");
+  const rT = localStorage.getItem("ecommerceSuperuserandstaffRefreshToken");
+
   const logoutUser = async () => {
     try {
-      const refresh = localStorage.getItem(
-        "ecommerceSuperuserandstaffRefreshToken"
+      const response = await fetch(
+        `${process.env.REACT_APP_BASE_URL}/custom_user/logout/`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${aT}`,
+          },
+          body: JSON.stringify({
+            refresh_token: rT,
+          }),
+        }
       );
-
-      await fetch(`${process.env.REACT_APP_BASE_URL}/custom_user/logout/`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ refresh_token: refresh }),
-      });
-
-      localStorage.removeItem("ecommerceSuperuserandstaffAccessToken");
-      localStorage.removeItem("ecommerceSuperuserandstaffRefreshToken");
-      localStorage.removeItem("user");
-
-      setCurrentUser(null); // clear current user
-      window.location.href = "/sign-in";
-    } catch (e) {
-      console.error(e);
+      const data = await response.json();
+      console.log("Logout response:", data);
+    } catch (error) {
+      console.error("Error logging out:", error);
     }
   };
 
-  // If no token → show only login/sign-up pages
-  if (!accessToken) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!aT) {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Routes>
-          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
@@ -404,7 +439,8 @@ function App() {
           <Header
             handleTogglle={handleToggle}
             logoutUser={logoutUser}
-            currentUser={currentUser} // Pass current user to header
+            // currentUser={currentUser} // Pass current user to header
+            c_user={c_user}
           />
           <ActivityTimeline />
           <SidebarTheme />

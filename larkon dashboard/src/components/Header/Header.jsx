@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "@iconify-icon/react";
 import { Link, useNavigate } from "react-router-dom";
-// import { useApiContext } from "../../context/ApiContext";
+import { useApiContext } from "../../context/ApiContext";
 
-const Header = ({ handleTogglle, logoutUser }) => {
+const Header = ({ handleTogglle, c_user, logoutUser }) => {
   // const { logoutUser } = useApiContext();
   const navigate = useNavigate();
-  const [currentUser, setCurrentUser] = useState(null);
+  // const [currentUser, setCurrentUser] = useState(null);
 
-  const handleLogout = async () => {
-    await logoutUser();
-    alert("Logged out!");
-    navigate("/sign-in");
-  };
+  // const handleLogout = async () => {
+  //   await logoutUser();
+  //   alert("Logged out!");
+  //   navigate("/sign-in");
+  // };
 
   const [theme, setTheme] = useState(() => {
     // Get the theme from localStorage if available, else default to "light"
@@ -31,10 +31,10 @@ const Header = ({ handleTogglle, logoutUser }) => {
     document.documentElement.setAttribute("data-bs-theme", theme); // Set 'data-bs-theme' on <html> element
   }, [theme]);
 
-  useEffect(() => {
-    const userData = localStorage.getItem("user");
-    if (userData) setCurrentUser(JSON.parse(userData));
-  }, []);
+  // useEffect(() => {
+  //   const userData = localStorage.getItem("user");
+  //   if (userData) setCurrentUser(JSON.parse(userData));
+  // }, []);
 
   return (
     <header className="topbar">
@@ -282,10 +282,15 @@ const Header = ({ handleTogglle, logoutUser }) => {
               <div className="dropdown-menu dropdown-menu-end">
                 <h6 className="dropdown-header">
                   Welcome{" "}
-                  {currentUser
+                  {/* {currentUser
                     ? currentUser.first_name && currentUser.last_name
                       ? `${currentUser.first_name} ${currentUser.last_name}`
                       : currentUser.username
+                    : "User"} */}
+                  {c_user
+                    ? c_user.first_name && c_user.last_name
+                      ? `${c_user.first_name} ${c_user.last_name}`
+                      : c_user.username
                     : "User"}
                   !
                   {/* {currentUser?.first_name || currentUser?.username || "User"}! */}
@@ -317,8 +322,12 @@ const Header = ({ handleTogglle, logoutUser }) => {
 
                 <Link
                   className="dropdown-item text-danger"
-                  to="#"
-                  onClick={handleLogout}
+                  // to="#"
+                  // onClick={handleLogout}
+                  to="/"
+                  onClick={() => {
+                    logoutUser();
+                  }}
                 >
                   <i className="bx bx-log-out fs-18 align-middle me-1"></i>
                   <span className="align-middle">Logout</span>
