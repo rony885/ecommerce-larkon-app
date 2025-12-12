@@ -328,6 +328,7 @@ const Header = ({ handleTogglle, c_user, logoutUser }) => {
                   onClick={() => {
                     logoutUser();
                   }}
+                  
                 >
                   <i className="bx bx-log-out fs-18 align-middle me-1"></i>
                   <span className="align-middle">Logout</span>

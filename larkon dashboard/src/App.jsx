@@ -325,6 +325,7 @@ import { useApiContext } from "./context/ApiContext";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSidebarEnabled, setIsSidebarEnabled] = useState(false);
+
   // const [currentUser, setCurrentUser] = useState(null);
 
   // ✅ Load user & token from localStorage

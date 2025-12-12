@@ -284,23 +284,27 @@ const ApiContext = ({ children }) => {
   }, [urls.currentUser]);
 
   // Logout user
-  const logoutUser = async () => {
-    try {
-      const refreshToken = localStorage.getItem("refreshToken");
-      await fetch(`${process.env.REACT_APP_BASE_URL}/custom_user/logout/`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ refresh_token: refreshToken }),
-      });
+  // const logoutUser = async () => {
+  //   try {
+  //     const refreshToken = localStorage.getItem("refreshToken");
+  //     await fetch(`${process.env.REACT_APP_BASE_URL}/custom_user/logout/`, {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ refresh_token: refreshToken }),
+  //     });
 
-      // Clear tokens
-      localStorage.removeItem("accessToken");
-      localStorage.removeItem("refreshToken");
-      console.log("Logged out successfully");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  //     // Clear tokens
+  //     // localStorage.removeItem("accessToken");
+  //     // localStorage.removeItem("refreshToken");
+
+  //     localStorage.removeItem("ecommerceSuperuserandstaffAccessToken");
+  //     localStorage.removeItem("ecommerceSuperuserandstaffRefreshToken");
+
+  //     console.log("Logged out successfully");
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   // Fetch current user every time
   useEffect(() => {
@@ -341,7 +345,7 @@ const ApiContext = ({ children }) => {
         fetchOrder,
 
         fetchAllUsers,
-        logoutUser,
+        // logoutUser,
       }}
     >
       {children}
