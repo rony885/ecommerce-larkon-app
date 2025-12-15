@@ -34,7 +34,7 @@ const SidebarMenu = ({ handleTogglle }) => {
 
             <Link to="/" className="logo-light">
               <img
-                src="assets/images/logo-sm.png"
+                src="/assets/images/logo-sm.png"
                 className="logo-sm"
                 alt="logo sm"
               />

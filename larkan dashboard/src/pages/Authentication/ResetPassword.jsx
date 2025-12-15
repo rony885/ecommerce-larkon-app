@@ -13,7 +13,7 @@ const ResetPassword = () => {
                   <div className="auth-logo mb-4">
                     <Link to="/" className="logo-dark">
                       <img
-                        src="assets/images/logo-dark.png"
+                        src="/assets/images/logo-dark.png"
                         height="24"
                         alt="logo dark"
                       />
@@ -21,7 +21,7 @@ const ResetPassword = () => {
 
                     <Link to="/" className="logo-light">
                       <img
-                        src="assets/images/logo-light.png"
+                        src="/assets/images/logo-light.png"
                         height="24"
                         alt="logo light"
                       />
@@ -59,12 +59,9 @@ const ResetPassword = () => {
 
                   <p className="mt-5 text-danger text-center">
                     Back to
-                    <a
-                      href="auth-signin.html"
-                      className="text-dark fw-bold ms-1"
-                    >
+                    <Link to="/sign-in" className="text-dark fw-bold ms-1">
                       Sign In
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -75,7 +72,7 @@ const ResetPassword = () => {
             <div className="card h-100 mb-0 overflow-hidden">
               <div className="d-flex flex-column h-100">
                 <img
-                  src="assets/images/small/img-10.jpg"
+                  src="/assets/images/small/img-10.jpg"
                   alt=""
                   className="w-100 h-100"
                 />

@@ -610,7 +610,7 @@ const UL = ({ handleTogglle }) => {
           </div>
         </li>
 
-        {/* <li className="nav-item">
+        <li className="nav-item">
           <Link
             className={`nav-link ${activeMenu === "settings" ? "active" : ""}`}
             to="/settings"
@@ -621,7 +621,7 @@ const UL = ({ handleTogglle }) => {
             </span>
             <span className="nav-text"> Settings </span>
           </Link>
-        </li> */}
+        </li>
 
         <li className="menu-title mt-2">Users</li>
 
