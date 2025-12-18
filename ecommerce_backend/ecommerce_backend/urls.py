@@ -39,6 +39,7 @@ urlpatterns = [
     # path('blog_api/', include('Blog.urls')),
     path('', include('Blog.urls')),
     path('', include('product.urls')),
+    path('', include('Purchases.urls')),
     path('', include('Settings.urls')),
     # path('product_api/', include('product.urls')),
     # path('api/settings/', include('settings_app.urls')), 
