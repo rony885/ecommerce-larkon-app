@@ -37,10 +37,10 @@ urlpatterns = [
     path('custom_user/', include('CustomUser.urls')), 
     # 👇 include app URLs
     # path('blog_api/', include('Blog.urls')),
-    path('', include('Blog.urls')),
-    path('', include('product.urls')),
-    path('', include('Purchases.urls')),
+    path('', include('Product.urls')),
+    path('', include('Purchase.urls')),
     path('', include('Settings.urls')),
+    path('', include('Blog.urls')),
     # path('product_api/', include('product.urls')),
     # path('api/settings/', include('settings_app.urls')), 
 ]

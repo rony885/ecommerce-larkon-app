@@ -1,19 +1,19 @@
 
 from django.db import models
-from product.models import Product
+from Product.models import Product
 from Settings.models import Supplier
 
 class Purchase(models.Model):
     supplier = models.ForeignKey(
         Supplier,
         on_delete=models.CASCADE,
-        related_name="purchases"
+        related_name="purchase"
     )
 
     product = models.ForeignKey(
         Product,
         on_delete=models.CASCADE,
-        related_name="purchases"
+        related_name="purchase"
     )
 
     purchase_date = models.DateField(auto_now_add=True)

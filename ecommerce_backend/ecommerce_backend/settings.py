@@ -45,11 +45,12 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',   # optional
 
     # Local apps
-    'product',
-    'Purchases',
-    'Blog',
-    'Settings',
     'CustomUser',
+    'Product',
+    'Purchase',
+    'Settings',
+    'Blog',
+
 ]
 
 
