@@ -104,7 +104,8 @@ const ApiContext = ({ children }) => {
     unpaginateBlog: `${process.env.REACT_APP_BASE_URL}/blog_api/unpaginate_blog/`,
 
     // order & purchase module
-    purchase: `${process.env.REACT_APP_BASE_URL}/purchase/`,
+    // purchase: `${process.env.REACT_APP_BASE_URL}/purchase/`,
+    purchase: `${process.env.REACT_APP_BASE_URL}/purchase_api/purchase/`,
     order: `${process.env.REACT_APP_BASE_URL}/order/`,
 
     // User / Customer module

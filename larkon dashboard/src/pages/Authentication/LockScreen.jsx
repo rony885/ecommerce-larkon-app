@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ResetPassword = () => {
+const LockScreen = () => {
   return (
     <div className="d-flex flex-column h-100 p-3">
       <div className="d-flex flex-column flex-grow-1">
@@ -13,7 +13,7 @@ const ResetPassword = () => {
                   <div className="auth-logo mb-4">
                     <Link to="/" className="logo-dark">
                       <img
-                        src="/assets/images/logo-dark.png"
+                        src="assets/images/logo-dark.png"
                         height="24"
                         alt="logo dark"
                       />
@@ -21,47 +21,51 @@ const ResetPassword = () => {
 
                     <Link to="/" className="logo-light">
                       <img
-                        src="/assets/images/logo-light.png"
+                        src="assets/images/logo-light.png"
                         height="24"
                         alt="logo light"
                       />
                     </Link>
                   </div>
 
-                  <h2 className="fw-bold fs-24">Reset Password</h2>
+                  <h2 className="fw-bold fs-24">Hi ! Gaston</h2>
 
                   <p className="text-muted mt-1 mb-4">
-                    Enter your email address and we'll send you an email with
-                    instructions to reset your password.
+                    Enter your password to access the admin.
                   </p>
 
-                  <div>
+                  <div className="mb-5">
                     <form className="authentication-form">
                       <div className="mb-3">
-                        <label className="form-label" for="example-email">
-                          Email
+                        <label
+                          className="form-label visually-hidden"
+                          for="example-password"
+                        >
+                          Password
                         </label>
                         <input
-                          type="email"
-                          id="example-email"
-                          name="example-email"
+                          type="text"
+                          id="example-password"
                           className="form-control"
-                          placeholder="Enter your email"
+                          placeholder="Enter your password"
                         />
                       </div>
                       <div className="mb-1 text-center d-grid">
                         <button className="btn btn-primary" type="submit">
-                          Reset Password
+                          Sign In
                         </button>
                       </div>
                     </form>
                   </div>
 
-                  <p className="mt-5 text-danger text-center">
-                    Back to
-                    <Link to="/sign-in" className="text-dark fw-bold ms-1">
-                      Sign In
-                    </Link>
+                  <p className="text-danger text-center">
+                    Not you? return
+                    <a
+                      href="auth-signup.html"
+                      className="text-dark fw-bold ms-1"
+                    >
+                      Sign Up
+                    </a>
                   </p>
                 </div>
               </div>
@@ -72,12 +76,13 @@ const ResetPassword = () => {
             <div className="card h-100 mb-0 overflow-hidden">
               <div className="d-flex flex-column h-100">
                 <img
-                  src="/assets/images/small/img-10.jpg"
+                  src="assets/images/small/img-10.jpg"
                   alt=""
                   className="w-100 h-100"
                 />
               </div>
             </div>
+            {/* <!-- end card --> */}
           </div>
         </div>
       </div>
@@ -85,4 +90,4 @@ const ResetPassword = () => {
   );
 };
 
-export default ResetPassword;
+export default LockScreen;

@@ -274,19 +274,14 @@ import NotFound from "./components/NotFound";
 import Dashboard from "./pages/Home/Dashboard";
 import ProductsList from "./pages/Products/ProductsList";
 import AddProduct from "./pages/Products/AddProduct";
-import ProductGrid from "./pages/Products/ProductGrid";
 import ProductEdit from "./pages/Products/ProductEdit";
 
 import CategoryList from "./pages/Category/CategoryList";
 import CategoryEdit from "./pages/Category/CategoryEdit";
 import AddCategory from "./pages/Category/AddCategory";
 
-import Warehouse from "./pages/Inventory/Warehouse";
-import ReceivedOrder from "./pages/Inventory/ReceivedOrder";
-
 import OrderList from "./pages/Order/OrderList";
 import OrderDetails from "./pages/Order/OrderDetails";
-import OrderCart from "./pages/Order/OrderCart";
 import CheckOut from "./pages/Order/CheckOut";
 
 import PurchasesList from "./pages/Purchases/PurchasesList";
@@ -295,15 +290,6 @@ import PurchaseReturns from "./pages/Purchases/PurchaseReturns";
 
 import Settings from "./pages/Settings/Settings";
 import Profile from "./pages/Profile/Profile";
-
-import SellersList from "./pages/Sellers/SellersList";
-import SellerDetails from "./pages/Sellers/SellerDetails";
-import SellerEdit from "./pages/Sellers/SellerEdit";
-import AddSeller from "./pages/Sellers/AddSeller";
-
-import RoleList from "./pages/Roles/RoleList";
-import RoleEdit from "./pages/Roles/RoleEdit";
-import RoleAdd from "./pages/Roles/RoleAdd";
 
 import SignIn from "./pages/Authentication/SignIn";
 import SignUp from "./pages/Authentication/SignUp";
@@ -321,6 +307,7 @@ import Courier from "./pages/Settings/Courier";
 import DeliveryType from "./pages/Settings/DeliveryType";
 import Client from "./pages/Settings/Client";
 import { useApiContext } from "./context/ApiContext";
+import AddPurchase from "./pages/Purchases/AddPurchase";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -458,7 +445,6 @@ function App() {
             <Route path="/unit" element={<Unit />}></Route>
             <Route path="/product-edit/:id" element={<ProductEdit />}></Route>
             <Route path="/product-add" element={<AddProduct />}></Route>
-            <Route path="/product-grid" element={<ProductGrid />}></Route>
 
             <Route path="/category-list" element={<CategoryList />}></Route>
             <Route path="/category-edit/:id" element={<CategoryEdit />}></Route>
@@ -470,18 +456,12 @@ function App() {
             <Route path="/client" element={<Client />}></Route>
             <Route path="/general-settings" element={<Settings />}></Route>
 
-            <Route path="/inventory-warehouse" element={<Warehouse />}></Route>
-            <Route
-              path="/inventory-received-orders"
-              element={<ReceivedOrder />}
-            ></Route>
-
             <Route path="/orders-list" element={<OrderList />}></Route>
             <Route path="/order-detail" element={<OrderDetails />}></Route>
-            <Route path="/order-cart" element={<OrderCart />}></Route>
             <Route path="/order-checkout" element={<CheckOut />}></Route>
 
             <Route path="/purchase-list" element={<PurchasesList />}></Route>
+            <Route path="/purchase-add" element={<AddPurchase />}></Route>
             <Route path="/purchase-order" element={<PurchasesOrder />}></Route>
             <Route
               path="/purchase-returns"
@@ -490,15 +470,6 @@ function App() {
 
             <Route path="/settings" element={<Settings />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
-
-            <Route path="/seller-list" element={<SellersList />}></Route>
-            <Route path="/seller-details" element={<SellerDetails />}></Route>
-            <Route path="/seller-edit" element={<SellerEdit />}></Route>
-            <Route path="/seller-add" element={<AddSeller />}></Route>
-
-            <Route path="/role-list" element={<RoleList />}></Route>
-            <Route path="/role-edit" element={<RoleEdit />}></Route>
-            <Route path="/role-add" element={<RoleAdd />}></Route>
 
             <Route path="/password" element={<ResetPassword />}></Route>
             <Route path="/lock-screen" element={<LockScreen />}></Route>

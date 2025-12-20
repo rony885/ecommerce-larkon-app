@@ -28,8 +28,6 @@ const UL = ({ handleTogglle }) => {
     const menuMappings = {
       "/": "dashboard",
 
-      // Blogs
-      "/blogs": "blogs",
       // Products
       "/product-list": "products",
       "/product-grid": "products",
@@ -37,6 +35,7 @@ const UL = ({ handleTogglle }) => {
       "/unit": "products",
       "/product-edit": "products",
       "/product-add": "products",
+
       // Category
       "/category-list": "category",
       // "/category-edit": "category",
@@ -49,31 +48,32 @@ const UL = ({ handleTogglle }) => {
       "/client": "setting",
       "/general-settings": "setting",
 
-      // Inventory
-      "/inventory-warehouse": "inventory",
-      "/inventory-received-orders": "inventory",
+      // Blogs
+      "/blogs": "blogs",
+
       // Orders
       "/orders-list": "orders",
       "/order-detail": "orders",
-      "/order-cart": "orders",
       "/order-checkout": "orders",
+
       // Purchases
       "/purchase-list": "purchases",
+      "/purchase-add": "purchases",
       "/purchase-order": "purchases",
       "/purchase-returns": "purchases",
+
       // Settings
       // "/settings": "settings",
+
       // Profile
       "/profile": "profile",
+
       // Seller
       "/seller-list": "sellers",
       "/seller-details": "sellers",
       "/seller-edit": "sellers",
       "/seller-add": "sellers",
-      // Role
-      "/role-list": "roles",
-      "/role-edit": "roles",
-      "/role-add": "roles",
+
       // Authentication
       "/sign-in": "authentication",
       "/sign-up": "authentication",
@@ -85,14 +85,10 @@ const UL = ({ handleTogglle }) => {
     const subMenuMappings = {
       "/": "",
 
-      // Blogs
-      "/blogs": "blogs",
-
       // Products
       "/product-list": "product-list",
       "/brand": "brand",
       "/unit": "unit",
-      "/product-grid": "product-grid",
       "/product-edit": "product-edit",
       "/product-add": "product-add",
 
@@ -108,19 +104,22 @@ const UL = ({ handleTogglle }) => {
       "/client": "client",
       "/general-settings": "general-settings",
 
-      // Inventory
-      "/inventory-warehouse": "inventory-warehouse",
-      "/inventory-received-orders": "inventory-received-orders",
+      // Blogs
+      "/blogs": "blogs",
+
       // Orders
       "/orders-list": "orders-list",
       "/order-detail": "order-detail",
       "/order-checkout": "order-checkout",
+
       // Purchases
       "/purchase-list": "purchase-list",
+      "/purchase-add": "purchase-add",
       "/purchase-returns": "purchase-returns",
 
       // Settings
       // "/settings": "settings",
+
       // Profile
       "/profile": "profile",
 
@@ -129,10 +128,6 @@ const UL = ({ handleTogglle }) => {
       "/seller-details": "seller-details",
       "/seller-edit": "seller-edit",
       "/seller-add": "seller-add",
-      // Role
-      "/role-list": "role-list",
-      "/role-edit": "role-edit",
-      "/role-add": "role-add",
 
       // Authentication
       "/sign-in": "sign-in",
@@ -174,19 +169,6 @@ const UL = ({ handleTogglle }) => {
               <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
             </span>
             <span className="nav-text"> Dashboard </span>
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={`nav-link ${activeMenu === "blogs" ? "active" : ""}`}
-            to="/blogs"
-            onClick={handleTogglle}
-          >
-            <span className="nav-icon">
-              <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
-            </span>
-            <span className="nav-text"> Blog</span>
           </Link>
         </li>
 
@@ -248,19 +230,7 @@ const UL = ({ handleTogglle }) => {
                   to="/product-list"
                   ref={activeSubMenu === "product-list" ? activeItemRef : null}
                 >
-                  List
-                </Link>
-              </li>
-
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "product-grid" ? "active" : ""
-                  }`}
-                  to="/product-grid"
-                  onClick={handleTogglle}
-                >
-                  Grid
+                  Product List
                 </Link>
               </li>
 
@@ -424,7 +394,7 @@ const UL = ({ handleTogglle }) => {
                   onClick={handleTogglle}
                   to="/general-settings"
                 >
-                  GeneralSettings
+                  General Settings
                 </Link>
               </li>
             </ul>
@@ -433,52 +403,15 @@ const UL = ({ handleTogglle }) => {
 
         <li className="nav-item">
           <Link
-            className={`nav-link menu-arrow ${
-              activeMenu === "inventory" ? "active" : ""
-            }`}
-            onClick={() => handleSubMenuToggle("inventory")}
-            to="#sidebarInventory"
-            data-bs-toggle="collapse"
-            role="button"
-            aria-expanded="false"
-            aria-controls="sidebarInventory"
+            className={`nav-link ${activeMenu === "blogs" ? "active" : ""}`}
+            to="/blogs"
+            onClick={handleTogglle}
           >
             <span className="nav-icon">
-              <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
+              <iconify-icon icon="solar:volleyball-bold-duotone"></iconify-icon>
             </span>
-            <span className="nav-text"> Inventory </span>
+            <span className="nav-text"> Blog</span>
           </Link>
-          <div
-            className={`collapse ${activeMenu === "inventory" ? "show" : ""}`}
-            id="sidebarInventory"
-          >
-            <ul className="nav sub-navbar-nav">
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "inventory-warehouse" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/inventory-warehouse"
-                >
-                  Warehouse
-                </Link>
-              </li>
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "inventory-received-orders"
-                      ? "active"
-                      : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/inventory-received-orders"
-                >
-                  Received Orders
-                </Link>
-              </li>
-            </ul>
-          </div>
         </li>
 
         <li className="nav-item">
@@ -528,23 +461,12 @@ const UL = ({ handleTogglle }) => {
               <li className="sub-nav-item">
                 <Link
                   className={`sub-nav-link  ${
-                    activeSubMenu === "order-cart" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/order-cart"
-                >
-                  Cart
-                </Link>
-              </li>
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
                     activeSubMenu === "order-checkout" ? "active" : ""
                   }`}
                   onClick={handleTogglle}
                   to="/order-checkout"
                 >
-                  Check Out
+                  Checkout
                 </Link>
               </li>
             </ul>
@@ -587,6 +509,17 @@ const UL = ({ handleTogglle }) => {
               <li className="sub-nav-item">
                 <Link
                   className={`sub-nav-link  ${
+                    activeSubMenu === "purchase-add" ? "active" : ""
+                  }`}
+                  onClick={handleTogglle}
+                  to="/purchase-add"
+                >
+                  Purchase Add
+                </Link>
+              </li>
+              <li className="sub-nav-item">
+                <Link
+                  className={`sub-nav-link  ${
                     activeSubMenu === "purchase-order" ? "active" : ""
                   }`}
                   onClick={handleTogglle}
@@ -610,7 +543,7 @@ const UL = ({ handleTogglle }) => {
           </div>
         </li>
 
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link
             className={`nav-link ${activeMenu === "settings" ? "active" : ""}`}
             to="/settings"
@@ -621,7 +554,7 @@ const UL = ({ handleTogglle }) => {
             </span>
             <span className="nav-text"> Settings </span>
           </Link>
-        </li>
+        </li> */}
 
         <li className="menu-title mt-2">Users</li>
 
@@ -638,175 +571,7 @@ const UL = ({ handleTogglle }) => {
           </Link>
         </li>
 
-        <li className="nav-item">
-          <Link
-            className={`nav-link menu-arrow ${
-              activeMenu === "roles" ? "active" : ""
-            }`}
-            onClick={() => handleSubMenuToggle("roles")}
-            to="#sidebarRoles"
-            data-bs-toggle="collapse"
-            role="button"
-            aria-expanded="false"
-            aria-controls="sidebarRoles"
-          >
-            <span className="nav-icon">
-              <iconify-icon icon="solar:user-speak-rounded-bold-duotone"></iconify-icon>
-            </span>
-            <span className="nav-text"> Roles </span>
-          </Link>
-          <div
-            className={`collapse ${activeMenu === "roles" ? "show" : ""}`}
-            id="sidebarRoles"
-          >
-            <ul className="nav sub-navbar-nav">
-              <ul className="nav sub-navbar-nav">
-                <li className="sub-nav-item">
-                  <Link
-                    className={`sub-nav-link  ${
-                      activeSubMenu === "role-list" ? "active" : ""
-                    }`}
-                    onClick={handleTogglle}
-                    to="/role-list"
-                  >
-                    List
-                  </Link>
-                </li>
-                <li className="sub-nav-item">
-                  <Link
-                    className={`sub-nav-link  ${
-                      activeSubMenu === "role-edit" ? "active" : ""
-                    }`}
-                    onClick={handleTogglle}
-                    to="/role-edit"
-                  >
-                    Edit
-                  </Link>
-                </li>
-                <li className="sub-nav-item">
-                  <Link
-                    className={`sub-nav-link  ${
-                      activeSubMenu === "role-add" ? "active" : ""
-                    }`}
-                    onClick={handleTogglle}
-                    to="/role-add"
-                  >
-                    Create
-                  </Link>
-                </li>
-              </ul>
-            </ul>
-          </div>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={`nav-link menu-arrow ${
-              activeMenu === "sellers" ? "active" : ""
-            }`}
-            onClick={() => handleSubMenuToggle("sellers")}
-            to="#sidebarSellers"
-            data-bs-toggle="collapse"
-            role="button"
-            aria-expanded="false"
-            aria-controls="sidebarSellers"
-          >
-            <span className="nav-icon">
-              <iconify-icon icon="solar:shop-bold-duotone"></iconify-icon>
-            </span>
-            <span className="nav-text"> Sellers </span>
-          </Link>
-          <div
-            className={`collapse ${activeMenu === "sellers" ? "show" : ""}`}
-            id="sidebarSellers"
-          >
-            <ul className="nav sub-navbar-nav">
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "seller-list" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/seller-list"
-                >
-                  List
-                </Link>
-              </li>
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "seller-details" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/seller-details"
-                >
-                  Details
-                </Link>
-              </li>
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "seller-edit" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/seller-edit"
-                >
-                  Edit
-                </Link>
-              </li>
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "seller-add" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/seller-add"
-                >
-                  Create
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
-
         <li className="menu-title mt-2">Other</li>
-
-        <li className="nav-item">
-          <Link
-            className={`nav-link menu-arrow ${
-              activeMenu === "pages" ? "active" : ""
-            }`}
-            onClick={() => handleSubMenuToggle("pages")}
-            to="#sidebarPages"
-            data-bs-toggle="collapse"
-            role="button"
-            aria-expanded="false"
-            aria-controls="sidebarPages"
-          >
-            <span className="nav-icon">
-              <iconify-icon icon="solar:gift-bold-duotone"></iconify-icon>
-            </span>
-            <span className="nav-text"> Pages </span>
-          </Link>
-          <div
-            className={`collapse ${activeMenu === "pages" ? "show" : ""}`}
-            id="sidebarPages"
-          >
-            <ul className="nav sub-navbar-nav">
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "pages-404" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/pages-404"
-                >
-                  404 Error
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
 
         <li className="nav-item">
           <Link
