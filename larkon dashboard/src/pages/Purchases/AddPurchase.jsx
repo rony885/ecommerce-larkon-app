@@ -133,7 +133,7 @@ const AddPurchase = () => {
       })
       .catch((error) => {
         setMessage(error.message, "Error");
-        //  console.log(error)
+        console.log(error);
       });
   };
 
@@ -316,58 +316,8 @@ const AddPurchase = () => {
                         </div>
 
                         <div className="row">
-                          {/* <div className="col-lg-4">
-                            <div className="mb-3">
-                              <label htmlFor="quantity" className="form-label">
-                                Quantity
-                              </label>
-
-                              <div className="input-group quantity-group">
-                                <button
-                                  className="btn btn-outline-secondary"
-                                  type="button"
-                                  onClick={() =>
-                                    handleQuantityChange(
-                                      index,
-                                      product.quantity - 1
-                                    )
-                                  }
-                                  disabled={product.quantity <= 0}
-                                >
-                                  −
-                                </button>
-
-                                <input
-                                  type="number"
-                                  className="form-control text-center"
-                                  id={`product-qty-${index}`}
-                                  value={product.quantity}
-                                  onChange={(e) =>
-                                    handleQuantityChange(
-                                      index,
-                                      parseInt(e.target.value, 10)
-                                    )
-                                  }
-                                />
-
-                                <button
-                                  className="btn btn-outline-secondary"
-                                  type="button"
-                                  onClick={() =>
-                                    handleQuantityChange(
-                                      index,
-                                      product.quantity + 1
-                                    )
-                                  }
-                                >
-                                  +
-                                </button>
-                              </div>
-                            </div>
-                          </div> */}
-
                           <div className="col-lg-4">
-                            <div className="mb-3">
+                            <div className="mb-2">
                               <label className="form-label">Quantity</label>
 
                               <div className="input-group quantity-group">
@@ -424,8 +374,8 @@ const AddPurchase = () => {
                               </div>
                             </div>
                           </div>
-                          {/* 
-                          <div className="col-lg-4">
+
+                          {/* <div className="col-lg-4">
                             <Form.Group className="form-outline mb-2">
                               <Form.Label>
                                 Unit Price
@@ -452,6 +402,7 @@ const AddPurchase = () => {
                               </InputGroup>
                             </Form.Group>
                           </div> */}
+
                           <div className="col-lg-4">
                             <Form.Group className="form-outline mb-2">
                               <Form.Label>
@@ -479,7 +430,8 @@ const AddPurchase = () => {
                             </Form.Group>
                           </div>
 
-                          {/* <div className="col-lg-4">
+                          {/* 
+                          <div className="col-lg-4">
                             <Form.Group className="form-outline mb-2">
                               <Form.Label>
                                 Total Price
