@@ -35,12 +35,12 @@ const DashboardTable = () => {
               <tbody>
                 <tr>
                   <td className="ps-3">
-                    <Link to="order-detail.html">#RB5625</Link>
+                    <Link to="/order-detail">#RB5625</Link>
                   </td>
                   <td>29 April 2024</td>
                   <td>
                     <img
-                      src="assets/images/products/product-1(1).png"
+                      src="/assets/images/products/product-1(1).png"
                       alt="product-1(1)"
                       className="img-fluid avatar-sm"
                     />
@@ -59,12 +59,12 @@ const DashboardTable = () => {
                 </tr>
                 <tr>
                   <td className="ps-3">
-                    <Link to="order-detail.html">#RB9652</Link>
+                    <Link to="/order-detail">#RB9652</Link>
                   </td>
                   <td>25 April 2024</td>
                   <td>
                     <img
-                      src="assets/images/products/product-4.png"
+                      src="/assets/images/products/product-4.png"
                       alt="product-4"
                       className="img-fluid avatar-sm"
                     />
@@ -83,12 +83,12 @@ const DashboardTable = () => {
                 </tr>
                 <tr>
                   <td className="ps-3">
-                    <Link to="order-detail.html">#RB5984</Link>
+                    <Link to="/order-detail">#RB5984</Link>
                   </td>
                   <td>25 April 2024</td>
                   <td>
                     <img
-                      src="assets/images/products/product-5.png"
+                      src="/assets/images/products/product-5.png"
                       alt="product-5"
                       className="img-fluid avatar-sm"
                     />
@@ -107,12 +107,12 @@ const DashboardTable = () => {
                 </tr>
                 <tr>
                   <td className="ps-3">
-                    <Link to="order-detail.html">#RB3625</Link>
+                    <Link to="/order-detail">#RB3625</Link>
                   </td>
                   <td>21 April 2024</td>
                   <td>
                     <img
-                      src="assets/images/products/product-6.png"
+                      src="/assets/images/products/product-6.png"
                       alt="product-6"
                       className="img-fluid avatar-sm"
                     />
@@ -131,12 +131,12 @@ const DashboardTable = () => {
                 </tr>
                 <tr>
                   <td className="ps-3">
-                    <Link to="order-detail.html">#RB8652</Link>
+                    <Link to="/order-detail">#RB8652</Link>
                   </td>
                   <td>18 April 2024</td>
                   <td>
                     <img
-                      src="assets/images/products/product-1(2).png"
+                      src="/assets/images/products/product-1(2).png"
                       alt="product-1(2)"
                       className="img-fluid avatar-sm"
                     />

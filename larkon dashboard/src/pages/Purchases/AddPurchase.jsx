@@ -69,23 +69,6 @@ const AddPurchase = () => {
     setProductOptions(userProductOptions);
   }, [product, supplier]);
 
-  // const handleQuantityChange = (index, newQuantity) => {
-  //   if (!isNaN(newQuantity)) {
-  //     const updatedProductList = productList.map((product, idx) => {
-  //       if (idx === index) {
-  //         return {
-  //           ...product,
-  //           quantity: newQuantity,
-  //           linePrice: newQuantity * product.bdtRate,
-  //         };
-  //       }
-  //       return product;
-  //     });
-
-  //     setProductList(updatedProductList);
-  //   }
-  // };
-
   const calculateTotal = (qty, price, setFieldValue) => {
     const q = Number(qty) || 0;
     const p = Number(price) || 0;

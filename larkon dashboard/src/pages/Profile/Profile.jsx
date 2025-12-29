@@ -481,7 +481,7 @@ const Profile = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>  */}
 
         {/* <div className="row">
           <div className="col-lg-3">
