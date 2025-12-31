@@ -7,13 +7,13 @@ class Purchase(models.Model):
     supplier = models.ForeignKey(
         Supplier,
         on_delete=models.CASCADE,
-        related_name="purchase"
+        related_name="purchases"
     )
 
     product = models.ForeignKey(
         Product,
         on_delete=models.CASCADE,
-        related_name="purchase"
+        related_name="purchases"
     )
 
     purchase_date = models.DateField(auto_now_add=True)

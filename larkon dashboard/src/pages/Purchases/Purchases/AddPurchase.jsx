@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Footer from "../../components/Footer";
+import Footer from "../../../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 
 import { Formik, Form as FormikForm, Field } from "formik";
@@ -10,12 +10,12 @@ import InputGroup from "react-bootstrap/InputGroup";
 import * as yup from "yup";
 import axios from "axios";
 
-import { useApiContext } from "../../context/ApiContext";
+import { useApiContext } from "../../../context/ApiContext";
 
 const initialValues = {
   purchase_date: "",
-  supplier_name: "",
-  product_name: "",
+  supplier: "",
+  product: "",
   // quantity: "",
   // unit_price: "",
   // total_price: "",
@@ -26,8 +26,8 @@ const initialValues = {
 
 const schema = yup.object().shape({
   purchase_date: yup.string().required("Purchase Date is a required field!"),
-  supplier_name: yup.string().required("Supplier is a required field!"),
-  product_name: yup.string(),
+  supplier: yup.string().required("Supplier is a required field!"),
+  product: yup.string(),
   quantity: yup.string(),
   unit_price: yup.string(),
 });
@@ -63,7 +63,7 @@ const AddPurchase = () => {
     //product
     const userProductOptions = product.map((user) => ({
       value: user.id,
-      // label: `${user.product_name}------${user.unit_price}`,
+      // label: `${user.product}------${user.unit_price}`,
       label: user.name,
     }));
     setProductOptions(userProductOptions);
@@ -91,11 +91,18 @@ const AddPurchase = () => {
 
   // add
   const AddProductFunc = async (values) => {
+    // let formfield = new FormData();
+    // formfield.append("purchase_date", values.purchase_date);
+    // formfield.append("supplier", values.supplier);
+    // formfield.append("product", values.product);
+    // formfield.append("quantity", values.quantity);
+    // formfield.append("unit_price", values.unit_price);
+    // formfield.append("total_price", values.total_price);
+
     let formfield = new FormData();
     formfield.append("purchase_date", values.purchase_date);
-    formfield.append("supplier_name", values.supplier_name);
-    formfield.append("product_name", values.product_name);
-    formfield.append("product_name", values.product_name);
+    formfield.append("supplier_id", values.supplier); // <-- change here
+    formfield.append("product_id", values.product); // <-- change here
     formfield.append("quantity", values.quantity);
     formfield.append("unit_price", values.unit_price);
     formfield.append("total_price", values.total_price);
@@ -211,13 +218,13 @@ const AddPurchase = () => {
                                 Supplier<span className="text-danger">*</span>
                               </Form.Label>
                               <InputGroup hasValidation className="w-100">
-                                <Field name="supplier_name">
+                                <Field name="supplier">
                                   {({ field, form, meta }) => (
                                     <>
                                       <Select
                                         className="w-100"
-                                        id="supplier_name"
-                                        name="supplier_name"
+                                        id="supplier"
+                                        name="supplier"
                                         value={supplierOptions.find(
                                           (option) =>
                                             option.value === field.value
@@ -257,13 +264,13 @@ const AddPurchase = () => {
                                 Product <span className="text-danger">*</span>
                               </Form.Label>
                               <InputGroup hasValidation className="w-100">
-                                <Field name="product_name">
+                                <Field name="product">
                                   {({ field, form, meta }) => (
                                     <>
                                       <Select
                                         className="w-100"
-                                        id="product_name"
-                                        name="product_name"
+                                        id="product"
+                                        name="product"
                                         value={productOptions.find(
                                           (option) =>
                                             option.value === field.value
@@ -299,8 +306,58 @@ const AddPurchase = () => {
                         </div>
 
                         <div className="row">
+                          {/* <div className="col-lg-4">
+                            <div className="mb-3">
+                              <label htmlFor="quantity" className="form-label">
+                                Quantity
+                              </label>
+
+                              <div className="input-group quantity-group">
+                                <button
+                                  className="btn btn-outline-secondary"
+                                  type="button"
+                                  onClick={() =>
+                                    handleQuantityChange(
+                                      index,
+                                      product.quantity - 1
+                                    )
+                                  }
+                                  disabled={product.quantity <= 0}
+                                >
+                                  −
+                                </button>
+
+                                <input
+                                  type="number"
+                                  className="form-control text-center"
+                                  id={`product-qty-${index}`}
+                                  value={product.quantity}
+                                  onChange={(e) =>
+                                    handleQuantityChange(
+                                      index,
+                                      parseInt(e.target.value, 10)
+                                    )
+                                  }
+                                />
+
+                                <button
+                                  className="btn btn-outline-secondary"
+                                  type="button"
+                                  onClick={() =>
+                                    handleQuantityChange(
+                                      index,
+                                      product.quantity + 1
+                                    )
+                                  }
+                                >
+                                  +
+                                </button>
+                              </div>
+                            </div>
+                          </div> */}
+
                           <div className="col-lg-4">
-                            <div className="mb-2">
+                            <div className="mb-3">
                               <label className="form-label">Quantity</label>
 
                               <div className="input-group quantity-group">
@@ -385,7 +442,6 @@ const AddPurchase = () => {
                               </InputGroup>
                             </Form.Group>
                           </div> */}
-
                           <div className="col-lg-4">
                             <Form.Group className="form-outline mb-2">
                               <Form.Label>
@@ -413,8 +469,7 @@ const AddPurchase = () => {
                             </Form.Group>
                           </div>
 
-                          {/* 
-                          <div className="col-lg-4">
+                          {/* <div className="col-lg-4">
                             <Form.Group className="form-outline mb-2">
                               <Form.Label>
                                 Total Price

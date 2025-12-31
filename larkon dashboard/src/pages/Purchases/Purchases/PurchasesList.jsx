@@ -754,21 +754,22 @@
 // export default PurchasesList;
 
 import React, { useEffect, useState } from "react";
-import Footer from "../../components/Footer";
+import Footer from "../../../components/Footer";
 import { Link } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 
 import axios from "axios";
-import { useApiContext } from "../../context/ApiContext";
+import { useApiContext } from "../../../context/ApiContext";
+
 
 const PurchasesList = () => {
   // data fetching
-  const { product, fetchProduct } = useApiContext();
+  const { purchase, fetchPurchase } = useApiContext();
   // console.log(product);
 
   useEffect(() => {
-    fetchProduct();
-  }, [fetchProduct]);
+    fetchPurchase();
+  }, [fetchPurchase]);
 
   const [receivedId, setReceivedId] = useState(null);
 
@@ -795,10 +796,13 @@ const PurchasesList = () => {
                   <Link to="/" data-discover="true">
                     Dashboard
                   </Link>{" "}
-                  | Product List
+                  | Purchase List
                 </h4>
-                <Link to="/product-add" className="btn btn-sm btn-primary fs-4">
-                  Product Add
+                <Link
+                  to="/purchase-add"
+                  className="btn btn-sm btn-primary fs-4"
+                >
+                  Purchase Add
                 </Link>
               </div>
               <div>
@@ -819,23 +823,21 @@ const PurchasesList = () => {
                             ></label>
                           </div>
                         </th>
-                        <th>Id</th>
-                        <th>Image</th>
+                        <th className="text-start">Id</th>
+                        <th>Supplier</th>
                         <th>Product Name</th>
-                        <th>Category</th>
-                        <th>Brand</th>
-                        <th>Unit</th>
+                        <th>Purchase Date</th>
+                        <th>Quantity</th>
                         <th>Price</th>
                         <th>Stock</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                        <th>Action</th>
+                        {/* <th>Status</th> */}
+                        <th className="text-end">Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
-                      {product &&
-                        product.map((item, index) => {
+                      {purchase &&
+                        purchase.map((item, index) => {
                           return (
                             <tr key={index}>
                               <td>
@@ -851,35 +853,24 @@ const PurchasesList = () => {
                                   ></label>
                                 </div>
                               </td>
-                              <td>{index + 1}</td>
-                              <td>
-                                <div className="d-flex align-items-center gap-2">
-                                  <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
-                                    <img
-                                      src={item.image}
-                                      alt="imagee"
-                                      className="avatar-md"
-                                    />
-                                  </div>
-                                </div>
-                              </td>
-                              <td>{item.name}</td>
-                              <td>{item.category.name}</td>
-                              <td>{item.brand.name}</td>
-                              <td>{item.unit.name}</td>
-                              <td>{item.price}</td>
-                              <td>{item.stock}</td>
-                              <td>
+                              <td className="text-start">{index + 1}</td>
+
+                              <td>{item.supplier.name}</td>
+                              {/* <td>{item.category.name}</td>☻ */}
+                              <td>{item.product_name}</td>
+                              {/* <td>{item.brand.name}</td> */}
+                              <td>{item.purchase_date}</td>
+                              {/* <td>{item.unit.name}</td> */}
+                              <td>{item.quantity}</td>
+                              <td>{item.unit_price}</td>
+                              <td>{item.total_price}</td>
+                              {/* <td>
                                 {item.status === true ? "Active" : "Inactive"}
                               </td>
-                              <td>
-                                {item.description
-                                  ? `${item.description.slice(0, 50)}...`
-                                  : "----"}
-                              </td>
+                             */}
 
                               <td>
-                                <div className="d-flex gap-2">
+                                <div className="d-flex gap-2 justify-content-end align-items-center">
                                   <Tooltip title="View" arrow>
                                     <Link
                                       to="#!"
