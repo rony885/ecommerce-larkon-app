@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../../../components/Footer";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
 
 const PurchaseReturns = () => {
   return (
@@ -196,7 +196,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-2.jpg"
+                            src="/assets/images/users/avatar-2.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />
@@ -265,7 +265,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-3.jpg"
+                            src="/assets/images/users/avatar-3.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />
@@ -334,7 +334,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-4.jpg"
+                            src="/assets/images/users/avatar-4.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />
@@ -402,7 +402,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-5.jpg"
+                            src="/assets/images/users/avatar-5.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />
@@ -470,7 +470,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-6.jpg"
+                            src="/assets/images/users/avatar-6.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />
@@ -538,7 +538,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-7.jpg"
+                            src="/assets/images/users/avatar-7.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />
@@ -606,7 +606,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-8.jpg"
+                            src="/assets/images/users/avatar-8.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />
@@ -674,7 +674,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-9.jpg"
+                            src="/assets/images/users/avatar-9.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />
@@ -742,7 +742,7 @@ const PurchaseReturns = () => {
                         </td>
                         <td>
                           <img
-                            src="assets/images/users/avatar-10.jpg"
+                            src="/assets/images/users/avatar-10.jpg"
                             className="avatar-sm rounded-circle me-2"
                             alt="..."
                           />

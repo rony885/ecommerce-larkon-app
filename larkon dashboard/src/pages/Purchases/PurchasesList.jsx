@@ -754,12 +754,12 @@
 // export default PurchasesList;
 
 import React, { useEffect, useState } from "react";
-import Footer from "../../../components/Footer";
 import { Link } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 
 import axios from "axios";
-import { useApiContext } from "../../../context/ApiContext";
+import Footer from "../../components/Footer";
+import { useApiContext } from "../../context/ApiContext";
 
 
 const PurchasesList = () => {

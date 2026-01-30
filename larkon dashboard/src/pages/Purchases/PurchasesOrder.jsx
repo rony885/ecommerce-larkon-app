@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../../../components/Footer";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
 
 const PurchasesOrder = () => {
   return (
@@ -140,15 +140,12 @@ const PurchasesOrder = () => {
                     This Month
                   </Link>
                   <div className="dropdown-menu dropdown-menu-end">
-                    {/* <!-- item--> */}
                     <Link to="#!" className="dropdown-item">
                       Download
                     </Link>
-                    {/* <!-- item--> */}
                     <Link to="#!" className="dropdown-item">
                       Export
                     </Link>
-                    {/* <!-- item--> */}
                     <Link to="#!" className="dropdown-item">
                       Import
                     </Link>

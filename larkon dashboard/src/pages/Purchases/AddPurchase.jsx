@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Footer from "../../../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 
 import { Formik, Form as FormikForm, Field } from "formik";
@@ -10,7 +9,9 @@ import InputGroup from "react-bootstrap/InputGroup";
 import * as yup from "yup";
 import axios from "axios";
 
-import { useApiContext } from "../../../context/ApiContext";
+
+import Footer from "../../components/Footer";
+import { useApiContext } from "../../context/ApiContext";
 
 const initialValues = {
   purchase_date: "",
@@ -497,7 +498,6 @@ const AddPurchase = () => {
                               </InputGroup>
                             </Form.Group>
                           </div> */}
-
                           <div className="col-lg-4">
                             <Form.Group className="form-outline mb-2">
                               <Form.Label>

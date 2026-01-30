@@ -308,10 +308,10 @@ import DeliveryType from "./pages/Settings/DeliveryType";
 import Client from "./pages/Settings/Client";
 import { useApiContext } from "./context/ApiContext";
 
-import PurchasesList from "./pages/Purchases/Purchases/PurchasesList";
-import PurchasesOrder from "./pages/Purchases/Purchases/PurchasesOrder";
-import PurchaseReturns from "./pages/Purchases/Purchases/PurchaseReturns";
-import AddPurchase from "./pages/Purchases/Purchases/AddPurchase";
+import PurchasesList from "./pages/Purchases/PurchasesList";
+import PurchasesOrder from "./pages/Purchases/PurchasesOrder";
+import PurchaseReturns from "./pages/Purchases/PurchaseReturns";
+import AddPurchase from "./pages/Purchases/AddPurchase";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -391,7 +391,7 @@ function App() {
           body: JSON.stringify({
             refresh_token: rT,
           }),
-        }
+        },
       );
       const data = await response.json();
       console.log("Logout response:", data);
