@@ -23,7 +23,7 @@ const CategoryList = () => {
 
   const deleteService = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/product_api/category/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/product_api/category/${id}/`,
     );
     window.location.reload(false);
   };

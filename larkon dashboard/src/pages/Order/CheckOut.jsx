@@ -106,7 +106,7 @@ const AddSeller = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="col-xl-9 col-lg-8">
             <div className="card">
               <div className="card-header">
