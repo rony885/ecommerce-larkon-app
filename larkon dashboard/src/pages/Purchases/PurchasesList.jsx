@@ -761,7 +761,6 @@ import axios from "axios";
 import Footer from "../../components/Footer";
 import { useApiContext } from "../../context/ApiContext";
 
-
 const PurchasesList = () => {
   // data fetching
   const { purchase, fetchPurchase } = useApiContext();
@@ -780,7 +779,7 @@ const PurchasesList = () => {
 
   const deleteProduct = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/product_api/product/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/product_api/product/${id}/`,
     );
     window.location.reload(false);
   };
@@ -824,12 +823,12 @@ const PurchasesList = () => {
                           </div>
                         </th>
                         <th className="text-start">Id</th>
-                        <th>Supplier</th>
-                        <th>Product Name</th>
-                        <th>Purchase Date</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Stock</th>
+                        <th className="text-center">Supplier</th>
+                        <th className="text-center">Product Name</th>
+                        <th className="text-center">Purchase Date</th>
+                        <th className="text-center">Quantity</th>
+                        <th className="text-center">Price</th>
+                        <th className="text-center">Stock</th>
                         {/* <th>Status</th> */}
                         <th className="text-end">Action</th>
                       </tr>
@@ -855,22 +854,30 @@ const PurchasesList = () => {
                               </td>
                               <td className="text-start">{index + 1}</td>
 
-                              <td>{item.supplier.name}</td>
+                              <td className="text-center">
+                                {item.supplier.name}
+                              </td>
                               {/* <td>{item.category.name}</td>☻ */}
-                              <td>{item.product_name}</td>
+                              <td className="text-center">
+                                {item.product_name}
+                              </td>
                               {/* <td>{item.brand.name}</td> */}
-                              <td>{item.purchase_date}</td>
+                              <td className="text-center">
+                                {item.purchase_date}
+                              </td>
                               {/* <td>{item.unit.name}</td> */}
-                              <td>{item.quantity}</td>
-                              <td>{item.unit_price}</td>
-                              <td>{item.total_price}</td>
+                              <td className="text-center">{item.quantity}</td>
+                              <td className="text-center">{item.unit_price}</td>
+                              <td className="text-center">
+                                {item.total_price}
+                              </td>
                               {/* <td>
                                 {item.status === true ? "Active" : "Inactive"}
                               </td>
                              */}
 
-                              <td>
-                                <div className="d-flex gap-2 justify-content-end align-items-center">
+                              <td className="align-middle text-end">
+                                <div className="d-flex justify-content-end align-items-center gap-2">
                                   <Tooltip title="View" arrow>
                                     <Link
                                       to="#!"
