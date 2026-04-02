@@ -52,15 +52,15 @@ const UL = ({ handleTogglle }) => {
       "/blogs": "blogs",
 
       // Orders
-      "/orders-list": "orders",
+      "/order-list": "orders",
+      "/add-order": "orders",
       "/order-detail": "orders",
       "/order-checkout": "orders",
 
       // Purchases
       "/purchase-list": "purchases",
       "/purchase-add": "purchases",
-      "/purchase-order": "purchases",
-      "/purchase-returns": "purchases",
+      "/purchase-overview": "purchases",
 
       // Settings
       // "/settings": "settings",
@@ -108,14 +108,15 @@ const UL = ({ handleTogglle }) => {
       "/blogs": "blogs",
 
       // Orders
-      "/orders-list": "orders-list",
+      "/order-list": "orders-list",
+      "/add-order": "add-order",
       "/order-detail": "order-detail",
       "/order-checkout": "order-checkout",
 
       // Purchases
       "/purchase-list": "purchase-list",
       "/purchase-add": "purchase-add",
-      "/purchase-returns": "purchase-returns",
+      "/purchase-overview": "purchase-overview",
 
       // Settings
       // "/settings": "settings",
@@ -143,6 +144,9 @@ const UL = ({ handleTogglle }) => {
     } else if (path.startsWith("/product-stock")) {
       setActiveMenu("products");
       setActiveSubMenu("product-stock");
+    } else if (path.startsWith("/purchase-overview")) {
+      setActiveMenu("purchases");
+      setActiveSubMenu("purchase-list"); // or "purchase-overview" if you add it
     } else {
       setActiveMenu(menuMappings[path] || "");
       setActiveSubMenu(subMenuMappings[path] || "");
@@ -234,7 +238,7 @@ const UL = ({ handleTogglle }) => {
                 </Link>
               </li>
 
-              <li className="sub-nav-item">
+              {/* <li className="sub-nav-item">
                 <Link
                   className={`sub-nav-link  ${
                     activeSubMenu === "product-edit" ? "active" : ""
@@ -244,7 +248,7 @@ const UL = ({ handleTogglle }) => {
                 >
                   Edit
                 </Link>
-              </li>
+              </li> */}
 
               <li className="sub-nav-item">
                 <Link
@@ -442,9 +446,20 @@ const UL = ({ handleTogglle }) => {
                     activeSubMenu === "orders-list" ? "active" : ""
                   }`}
                   onClick={handleTogglle}
-                  to="/orders-list"
+                  to="/order-list"
                 >
                   List
+                </Link>
+              </li>
+              <li className="sub-nav-item">
+                <Link
+                  className={`sub-nav-link  ${
+                    activeSubMenu === "add-order" ? "active" : ""
+                  }`}
+                  onClick={handleTogglle}
+                  to="/add-order"
+                >
+                  Create Order
                 </Link>
               </li>
               <li className="sub-nav-item">
@@ -515,28 +530,6 @@ const UL = ({ handleTogglle }) => {
                   to="/purchase-add"
                 >
                   Purchase Add
-                </Link>
-              </li>
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "purchase-order" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/purchase-order"
-                >
-                  Order
-                </Link>
-              </li>
-              <li className="sub-nav-item">
-                <Link
-                  className={`sub-nav-link  ${
-                    activeSubMenu === "purchase-returns" ? "active" : ""
-                  }`}
-                  onClick={handleTogglle}
-                  to="/purchase-returns"
-                >
-                  Return
                 </Link>
               </li>
             </ul>

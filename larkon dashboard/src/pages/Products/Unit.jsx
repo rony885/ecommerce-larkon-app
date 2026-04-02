@@ -67,7 +67,7 @@ const Unit = () => {
 
   const submitAddUnitForm = async (
     values,
-    { setErrors, setSubmitting, resetForm },
+    { setErrors, setSubmitting, resetForm }
   ) => {
     try {
       setSubmitting(true);
@@ -117,7 +117,7 @@ const Unit = () => {
 
   const updateUnit = async (id) => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/product_api/unit/${id}/`,
+      `${process.env.REACT_APP_BASE_URL}/product_api/unit/${id}/`
     );
     setItem(data);
   };
@@ -129,7 +129,7 @@ const Unit = () => {
 
   const deleteUnit = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/product_api/unit/${id}/`,
+      `${process.env.REACT_APP_BASE_URL}/product_api/unit/${id}/`
     );
     window.location.reload(false);
   };
@@ -177,10 +177,10 @@ const Unit = () => {
                               ></label>
                             </div>
                           </th>
-                          <th className="text-start">ID</th>
-                          <th className="text-center">Name</th>
-                          <th className="text-center">Status</th>
-                          <th className="text-end">Action</th>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Status</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
 
@@ -203,13 +203,13 @@ const Unit = () => {
                                   </div>
                                 </td>
 
-                                <td className="text-start">{index + 1}</td>
-                                <td className="text-center">{item.name}</td>
-                                <td className="text-center">
+                                <td>{index + 1}</td>
+                                <td>{item.name}</td>
+                                <td>
                                   {item.status === true ? "Active" : "InActive"}
                                 </td>
-                                <td className="align-middle text-end">
-                                  <div className="d-flex justify-content-end align-items-center gap-2">
+                                <td>
+                                  <div className="d-flex gap-2">
                                     <Tooltip title="view" arrow>
                                       <Link
                                         to="#!"

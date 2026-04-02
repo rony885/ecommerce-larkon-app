@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Footer from "../../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 
 import { Formik, Form as FormikForm, Field } from "formik";
@@ -9,8 +10,6 @@ import InputGroup from "react-bootstrap/InputGroup";
 import * as yup from "yup";
 import axios from "axios";
 
-
-import Footer from "../../components/Footer";
 import { useApiContext } from "../../context/ApiContext";
 
 const initialValues = {
@@ -99,7 +98,7 @@ const AddPurchase = () => {
     // formfield.append("quantity", values.quantity);
     // formfield.append("unit_price", values.unit_price);
     // formfield.append("total_price", values.total_price);
-
+    
     let formfield = new FormData();
     formfield.append("purchase_date", values.purchase_date);
     formfield.append("supplier_id", values.supplier); // <-- change here
@@ -416,7 +415,8 @@ const AddPurchase = () => {
                             </div>
                           </div>
 
-                          {/* <div className="col-lg-4">
+                          {/* 
+                          <div className="col-lg-4">
                             <Form.Group className="form-outline mb-2">
                               <Form.Label>
                                 Unit Price
@@ -498,6 +498,7 @@ const AddPurchase = () => {
                               </InputGroup>
                             </Form.Group>
                           </div> */}
+
                           <div className="col-lg-4">
                             <Form.Group className="form-outline mb-2">
                               <Form.Label>

@@ -754,11 +754,11 @@
 // export default PurchasesList;
 
 import React, { useEffect, useState } from "react";
+import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 
 import axios from "axios";
-import Footer from "../../components/Footer";
 import { useApiContext } from "../../context/ApiContext";
 
 const PurchasesList = () => {
@@ -804,124 +804,115 @@ const PurchasesList = () => {
                   Purchase Add
                 </Link>
               </div>
-              <div>
-                <div className="table-responsive">
-                  <table className="table align-middle mb-0 table-hover table-centered">
-                    <thead className="bg-light-subtle">
-                      <tr>
-                        <th style={{ width: "20px" }}>
-                          <div className="form-check">
-                            <input
-                              type="checkbox"
-                              className="form-check-input"
-                              id="customCheck1"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheck1"
-                            ></label>
-                          </div>
-                        </th>
-                        <th className="text-start">Id</th>
-                        <th className="text-center">Supplier</th>
-                        <th className="text-center">Product Name</th>
-                        <th className="text-center">Purchase Date</th>
-                        <th className="text-center">Quantity</th>
-                        <th className="text-center">Price</th>
-                        <th className="text-center">Stock</th>
-                        {/* <th>Status</th> */}
-                        <th className="text-end">Action</th>
-                      </tr>
-                    </thead>
 
-                    <tbody>
-                      {purchase &&
-                        purchase.map((item, index) => {
-                          return (
-                            <tr key={index}>
-                              <td>
-                                <div className="form-check">
-                                  <input
-                                    type="checkbox"
-                                    className="form-check-input"
-                                    id="customCheck2"
-                                  />
-                                  <label
-                                    className="form-check-label"
-                                    htmlFor="customCheck2"
-                                  ></label>
-                                </div>
-                              </td>
-                              <td className="text-start">{index + 1}</td>
+              <div className="table-responsive">
+                <table className="table align-middle mb-0 table-hover table-centered">
+                  <thead className="bg-light-subtle">
+                    <tr>
+                      <th style={{ width: "20px" }}>
+                        <div className="form-check">
+                          <input
+                            type="checkbox"
+                            className="form-check-input"
+                            id="customCheck1"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="customCheck1"
+                          ></label>
+                        </div>
+                      </th>
+                      <th className="text-start">Id</th>
+                      <th>Supplier</th>
+                      <th>Product Name</th>
+                      <th>Purchase Date</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      <th>Stock</th>
+                      {/* <th>Status</th> */}
+                      <th className="text-end">Action</th>
+                    </tr>
+                  </thead>
 
-                              <td className="text-center">
-                                {item.supplier.name}
-                              </td>
-                              {/* <td>{item.category.name}</td>☻ */}
-                              <td className="text-center">
-                                {item.product_name}
-                              </td>
-                              {/* <td>{item.brand.name}</td> */}
-                              <td className="text-center">
-                                {item.purchase_date}
-                              </td>
-                              {/* <td>{item.unit.name}</td> */}
-                              <td className="text-center">{item.quantity}</td>
-                              <td className="text-center">{item.unit_price}</td>
-                              <td className="text-center">
-                                {item.total_price}
-                              </td>
-                              {/* <td>
+                  <tbody>
+                    {purchase &&
+                      purchase.map((item, index) => {
+                        return (
+                          <tr key={index}>
+                            <td>
+                              <div className="form-check">
+                                <input
+                                  type="checkbox"
+                                  className="form-check-input"
+                                  id="customCheck2"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="customCheck2"
+                                ></label>
+                              </div>
+                            </td>
+                            <td className="text-start">{index + 1}</td>
+
+                            <td>{item.supplier.name}</td>
+                            {/* <td>{item.category.name}</td>☻ */}
+                            <td>{item.product_name}</td>
+                            {/* <td>{item.brand.name}</td> */}
+                            <td>{item.purchase_date}</td>
+                            {/* <td>{item.unit.name}</td> */}
+                            <td>{item.quantity}</td>
+                            <td>{item.unit_price}</td>
+                            <td>{item.total_price}</td>
+                            {/* <td>
                                 {item.status === true ? "Active" : "Inactive"}
                               </td>
                              */}
 
-                              <td className="align-middle text-end">
-                                <div className="d-flex justify-content-end align-items-center gap-2">
-                                  <Tooltip title="View" arrow>
-                                    <Link
-                                      to="#!"
-                                      className="btn btn-light btn-sm"
-                                    >
-                                      <iconify-icon
-                                        icon="solar:eye-broken"
-                                        className="align-middle fs-18"
-                                      ></iconify-icon>
-                                    </Link>
-                                  </Tooltip>
+                            <td>
+                              <div className="d-flex gap-2 justify-content-end align-items-center">
+                                <Tooltip title="View" arrow>
+                                  <Link
+                                    to={`/purchase-overview/${item.id}`}
+                                    className="btn btn-light btn-sm"
+                                  >
+                                    <iconify-icon
+                                      icon="solar:eye-broken"
+                                      className="align-middle fs-18"
+                                    ></iconify-icon>
+                                  </Link>
+                                </Tooltip>
 
-                                  <Tooltip title="Edit" arrow>
-                                    <Link
-                                      to={`/product-edit/${item.id}`}
-                                      className="btn btn-soft-primary btn-sm"
-                                    >
-                                      <iconify-icon
-                                        icon="solar:pen-2-broken"
-                                        className="align-middle fs-18"
-                                      ></iconify-icon>
-                                    </Link>
-                                  </Tooltip>
+                                <Tooltip title="Edit" arrow>
+                                  <Link
+                                    // to={`/product-edit/${item.id}`}
+                                    className="btn btn-soft-primary btn-sm"
+                                  >
+                                    <iconify-icon
+                                      icon="solar:pen-2-broken"
+                                      className="align-middle fs-18"
+                                    ></iconify-icon>
+                                  </Link>
+                                </Tooltip>
 
-                                  <Tooltip title="Delete" arrow>
-                                    <button className="btn btn-soft-danger btn-sm">
-                                      <iconify-icon
-                                        icon="solar:trash-bin-minimalistic-2-broken"
-                                        className="align-middle fs-18"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#deleteModal"
-                                        type="button"
-                                        onClick={() => getId(item.id)}
-                                      ></iconify-icon>
-                                    </button>
-                                  </Tooltip>
-                                </div>
-                              </td>
-                            </tr>
-                          );
-                        })}
-                    </tbody>
-                  </table>
-                </div>
+                                <Tooltip title="Delete" arrow>
+                                  <button className="btn btn-soft-danger btn-sm">
+                                    <iconify-icon
+                                      icon="solar:trash-bin-minimalistic-2-broken"
+                                      className="align-middle fs-18"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                      type="button"
+                                      onClick={() => getId(item.id)}
+                                    ></iconify-icon>
+                                  </button>
+                                </Tooltip>
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                  </tbody>
+                </table>
               </div>
 
               <div className="card-footer border-top">

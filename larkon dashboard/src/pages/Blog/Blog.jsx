@@ -22,7 +22,7 @@ const Blog = () => {
 
   const deleteService = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/blog_api/blog/${id}/`,
+      `${process.env.REACT_APP_BASE_URL}/blog_api/blog/${id}/`
     );
     window.location.reload(false);
   };
@@ -125,12 +125,12 @@ const Blog = () => {
                             ></label>
                           </div>
                         </th>
-                        <th className="text-start">ID</th>
-                        <th className="text-center">Image</th>
-                        <th className="text-center">Title</th>
-                        <th className="text-center">Status</th>
-                        <th className="text-center">Description</th>
-                        <th className="text-end">Action</th>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Description</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
 
@@ -152,9 +152,9 @@ const Blog = () => {
                             </div>
                           </td>
 
-                          <td className="text-start">{item.id}</td>
+                          <td>{item.id}</td>
 
-                          <td className="d-flex justify-content-center align-items-center">
+                          <td>
                             <div className="d-flex align-items-center gap-2">
                               <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                 <img
@@ -166,12 +166,12 @@ const Blog = () => {
                             </div>
                           </td>
 
-                          <td className="text-center"> {item.title}</td>
-                          <td className="text-center">
+                          <td> {item.title}</td>
+                          <td>
                             {item.status === true ? "Active" : "InaAtive"}
                           </td>
                           {/* <td>{item.description.slice(0, 50)...}</td> */}
-                          <td className="text-center">
+                          <td>
                             {item.description
                               ? item.description.length > 50
                                 ? `${item.description.slice(0, 50)}...`
@@ -179,8 +179,8 @@ const Blog = () => {
                               : "No Description"}
                           </td>
 
-                          <td className="align-middle text-end">
-                            <div className="d-flex justify-content-end align-items-center gap-2">
+                          <td>
+                            <div className="d-flex gap-2">
                               <Link to="#!" className="btn btn-light btn-sm">
                                 <iconify-icon
                                   icon="solar:eye-broken"

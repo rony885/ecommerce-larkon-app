@@ -269,7 +269,8 @@ const Client = () => {
                                 <td>{item.phone}</td>
                                 <td>{item.email}</td>
                                 <td>{item.address}</td>
-                                <td>{item.company_name}</td>
+                                {/* <td>{item.company_name || "N/A"}</td> */}
+                                <td>{item.company_name ? item.company_name : "N/A"}</td>
                                 <td>
                                   {item.status === true ? "Active" : "Inactive"}
                                 </td>

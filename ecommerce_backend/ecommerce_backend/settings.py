@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'CustomUser',
     'Product',
     'Purchase',
+    'Order',
     'Settings',
     'Blog',
 

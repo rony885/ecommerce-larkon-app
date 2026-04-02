@@ -198,6 +198,7 @@ import * as yup from "yup";
 import axios from "axios";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
+import "@iconify-icon/react";
 
 const initialValues = {
   username: "",
@@ -252,6 +253,7 @@ const validate = (values) => {
 };
 
 const SignUp = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const [message, setMessage] = useState();
 
@@ -286,7 +288,7 @@ const SignUp = () => {
 
   const submitRegisterForm = async (
     values,
-    { setErrors, setSubmitting, resetForm }
+    { setErrors, setSubmitting, resetForm },
   ) => {
     try {
       AddRegFunc(values);
@@ -490,7 +492,8 @@ const SignUp = () => {
                             </Form.Label>
                             <InputGroup hasValidation>
                               <Form.Control
-                                type="password"
+                                // type="password"
+                                type={showPassword ? "text" : "password"}
                                 name="password"
                                 id="password"
                                 value={values.password}
@@ -501,6 +504,16 @@ const SignUp = () => {
                                 isValid={touched.password && !errors.password}
                                 className="form-control my-0"
                               />
+                              <InputGroup.Text
+                                style={{ cursor: "pointer" }}
+                                onClick={() => setShowPassword(!showPassword)}
+                              >
+                                {showPassword ? (
+                                  <iconify-icon icon="mdi:eye-off-outline"></iconify-icon>
+                                ) : (
+                                  <iconify-icon icon="mdi:eye-outline"></iconify-icon>
+                                )}
+                              </InputGroup.Text>
                               <Form.Control.Feedback type="invalid">
                                 {errors.password}
                               </Form.Control.Feedback>

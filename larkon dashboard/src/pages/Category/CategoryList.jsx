@@ -23,7 +23,7 @@ const CategoryList = () => {
 
   const deleteService = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/product_api/category/${id}/`,
+      `${process.env.REACT_APP_BASE_URL}/product_api/category/${id}/`
     );
     window.location.reload(false);
   };
@@ -68,11 +68,11 @@ const CategoryList = () => {
                             ></label>
                           </div>
                         </th>
-                        <th className="text-start">Id</th>
-                        <th className="text-center">Image</th>
-                        <th className="text-center">Category Name</th>
-                        <th className="text-center">Status</th>
-                        <th className="text-end">Action</th>
+                        <th>Id</th>
+                        <th>Image</th>
+                        <th>Category Name</th>
+                        <th>Status</th>
+                        <th className="text-center">Action</th>
                       </tr>
                     </thead>
 
@@ -94,23 +94,23 @@ const CategoryList = () => {
                                   ></label>
                                 </div>
                               </td>
-                              <td className="text-start">{index + 1}</td>
-                              <td className="d-flex justify-content-center align-items-center">
+                              <td>{index + 1}</td>
+                              <td>
                                 <div className="d-flex align-items-center gap-2">
                                   <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                     <img
                                       src={item.image}
-                                      alt="ImageNotFound"
+                                      alt="Imagee"
                                       className="avatar-md"
                                     />
                                   </div>
                                 </div>
                               </td>
-                              <td className="text-center">{item.name}</td>
+                              <td>{item.name}</td>
                               {/* <td>
                                 {item.status === true ? "Active" : "Inactive"}
                               </td> */}
-                              <td className="text-center">
+                              <td>
                                 {item.status ? (
                                   <span className="badge bg-success">
                                     Active
@@ -122,8 +122,8 @@ const CategoryList = () => {
                                 )}
                               </td>
 
-                              <td className="align-middle text-end">
-                                <div className="d-flex justify-content-end align-items-center gap-2">
+                              <td className="text-center">
+                                <div className="d-flex justify-content-center align-items-center gap-2">
                                   <Tooltip title="View" arrow>
                                     <Link
                                       to="#!"
@@ -131,7 +131,7 @@ const CategoryList = () => {
                                     >
                                       <iconify-icon
                                         icon="solar:eye-broken"
-                                        className="fs-18"
+                                        className="align-middle fs-18"
                                       ></iconify-icon>
                                     </Link>
                                   </Tooltip>
@@ -143,7 +143,7 @@ const CategoryList = () => {
                                     >
                                       <iconify-icon
                                         icon="solar:pen-2-broken"
-                                        className="fs-18"
+                                        className="align-middle fs-18"
                                       ></iconify-icon>
                                     </Link>
                                   </Tooltip>
@@ -158,7 +158,7 @@ const CategoryList = () => {
                                     >
                                       <iconify-icon
                                         icon="solar:trash-bin-minimalistic-2-broken"
-                                        className="fs-18"
+                                        className="align-middle fs-18"
                                       ></iconify-icon>
                                     </button>
                                   </Tooltip>

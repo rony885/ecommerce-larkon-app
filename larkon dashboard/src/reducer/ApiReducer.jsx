@@ -201,6 +201,7 @@ const ApiReducer = (state, action) => {
         ...state,
         isLoading: false,
         order: action.payload,
+        orderStatus: action.payload.status_choices,
         isError: false,
       };
 

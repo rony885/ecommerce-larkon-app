@@ -166,6 +166,7 @@ import * as yup from "yup";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import "@iconify-icon/react";
 
 const initialValues = {
   email: "",
@@ -210,6 +211,7 @@ const validate = (values) => {
 };
 
 const SignIn = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const [message, setMessage] = useState();
 
@@ -234,11 +236,11 @@ const SignIn = () => {
         // localStorage.setItem("ecommerceRefreshToken", response.data.refresh);
         localStorage.setItem(
           "ecommerceSuperuserandstaffAccessToken",
-          response.data.access
+          response.data.access,
         );
         localStorage.setItem(
           "ecommerceSuperuserandstaffRefreshToken",
-          response.data.refresh
+          response.data.refresh,
         );
 
         navigate("/");
@@ -252,7 +254,7 @@ const SignIn = () => {
 
   const submitLoginForm = async (
     values,
-    { setErrors, setSubmitting, resetForm }
+    { setErrors, setSubmitting, resetForm },
   ) => {
     try {
       AddLoginFunc(values);
@@ -316,7 +318,7 @@ const SignIn = () => {
                         >
                           <Form.Group className="form-outline mb-3 ">
                             <Form.Label>
-                              email<span className="text-danger">*</span>
+                              Email<span className="text-danger">*</span>
                             </Form.Label>
                             <InputGroup hasValidation>
                               <Form.Control
@@ -335,7 +337,7 @@ const SignIn = () => {
                             </InputGroup>
                           </Form.Group>
 
-                          <Form.Group className="form-outline mb-3 ">
+                          {/* <Form.Group className="form-outline mb-3 ">
                             <Form.Label>
                               Password<span className="text-danger">*</span>
                             </Form.Label>
@@ -352,6 +354,42 @@ const SignIn = () => {
                                 isValid={touched.password && !errors.password}
                                 className="form-control my-0"
                               />
+                              <Form.Control.Feedback type="invalid">
+                                {errors.password}
+                              </Form.Control.Feedback>
+                            </InputGroup>
+                          </Form.Group> */}
+
+                          <Form.Group className="form-outline mb-3 ">
+                            <Form.Label>
+                              Password<span className="text-danger">*</span>
+                            </Form.Label>
+
+                            <InputGroup hasValidation>
+                              <Form.Control
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                id="password"
+                                value={values.password}
+                                onChange={handleChange}
+                                isInvalid={
+                                  !!touched.password && !!errors.password
+                                }
+                                isValid={touched.password && !errors.password}
+                                className="form-control my-0"
+                              />
+
+                              <InputGroup.Text
+                                style={{ cursor: "pointer" }}
+                                onClick={() => setShowPassword(!showPassword)}
+                              >
+                                {showPassword ? (
+                                  <iconify-icon icon="mdi:eye-off-outline"></iconify-icon>
+                                ) : (
+                                  <iconify-icon icon="mdi:eye-outline"></iconify-icon>
+                                )}
+                              </InputGroup.Text>
+
                               <Form.Control.Feedback type="invalid">
                                 {errors.password}
                               </Form.Control.Feedback>

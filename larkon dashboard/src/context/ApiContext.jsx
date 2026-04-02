@@ -55,6 +55,7 @@ const initialState = {
   // order & purchase module
   purchase: [],
   order: [],
+  orderStatus: [],
 
   // User / Customer module
   all_users: [],
