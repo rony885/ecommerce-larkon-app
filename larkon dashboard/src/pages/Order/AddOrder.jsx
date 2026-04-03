@@ -492,7 +492,7 @@ const AddOrder = () => {
                                 )}
                               </Field>
                             </InputGroup>
-                          </Form.Group> */}
+                          </Form.Group>  */}
 
                           <Form.Group className="form-outline mb-3 divv">
                             <Form.Label>
@@ -760,6 +760,7 @@ const AddOrder = () => {
                               </Form.Control.Feedback>
                             </InputGroup>
                           </Form.Group> */}
+
                           <Form.Group className="form-outline mb-3">
                             <Form.Label>
                               Paid Amount
