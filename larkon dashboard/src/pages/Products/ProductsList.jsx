@@ -24,7 +24,7 @@ const ProductsList = () => {
 
   const deleteProduct = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/product_api/product/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/product_api/product/${id}/`,
     );
     window.location.reload(false);
   };
@@ -64,17 +64,17 @@ const ProductsList = () => {
                             ></label>
                           </div>
                         </th>
-                        <th>Id</th>
-                        <th>Image</th>
-                        <th>Product Name</th>
-                        <th>Category</th>
-                        <th>Brand</th>
-                        <th>Unit</th>
-                        <th>Price</th>
-                        <th>Stock</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                        <th>Action</th>
+                        <th className="text-start">Id</th>
+                        <th className="text-center">Image</th>
+                        <th className="text-center">Product Name</th>
+                        <th className="text-center">Category</th>
+                        <th className="text-center">Brand</th>
+                        <th className="text-center">Unit</th>
+                        <th className="text-center">Price</th>
+                        <th className="text-center">Stock</th>
+                        <th className="text-center">Status</th>
+                        <th className="text-center">Description</th>
+                        <th className="text-end">Action</th>
                       </tr>
                     </thead>
 
@@ -96,9 +96,9 @@ const ProductsList = () => {
                                   ></label>
                                 </div>
                               </td>
-                              <td>{index + 1}</td>
-                              <td>
-                                <div className="d-flex align-items-center gap-2">
+                              <td className="text-start">{index + 1}</td>
+                              <td className="text-center">
+                                <div className="d-flex align-items-center justify-content-center">
                                   <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                     <img
                                       src={item.image}
@@ -108,13 +108,15 @@ const ProductsList = () => {
                                   </div>
                                 </div>
                               </td>
-                              <td>{item.name}</td>
-                              <td>{item.category.name}</td>
-                              <td>{item.brand.name}</td>
-                              <td>{item.unit.name}</td>
-                              <td>{item.price}</td>
-                              <td>{item.stock}</td>
-                              <td>
+                              <td className="text-center">{item.name}</td>
+                              <td className="text-center">
+                                {item.category.name}
+                              </td>
+                              <td className="text-center">{item.brand.name}</td>
+                              <td className="text-center">{item.unit.name}</td>
+                              <td className="text-center">{item.price}</td>
+                              <td className="text-center">{item.stock}</td>
+                              <td className="text-center">
                                 {item.status === true ? "Active" : "Inactive"}
                               </td>
                               <td>
@@ -123,8 +125,8 @@ const ProductsList = () => {
                                   : "----"}
                               </td>
 
-                              <td>
-                                <div className="d-flex gap-2">
+                              <td className="text-end">
+                                <div className="d-flex justify-content-end align-items-center gap-2">
                                   <Tooltip title="View" arrow>
                                     <Link
                                       to="#!"

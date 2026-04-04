@@ -67,7 +67,7 @@ const Brand = () => {
 
   const submitAddBrandForm = async (
     values,
-    { setErrors, setSubmitting, resetForm }
+    { setErrors, setSubmitting, resetForm },
   ) => {
     try {
       setSubmitting(true);
@@ -100,7 +100,7 @@ const Brand = () => {
       .then((response) => {
         setMessage(
           response.success,
-          "Product brand is successfully updated..."
+          "Product brand is successfully updated...",
         );
         window.location.reload(false);
       })
@@ -111,7 +111,7 @@ const Brand = () => {
 
   const submitUpdateBrandForm = async (
     values,
-    { setErrors, setSubmitting }
+    { setErrors, setSubmitting },
   ) => {
     try {
       UpdateBrandFunc(values);
@@ -123,7 +123,7 @@ const Brand = () => {
 
   const updateBrand = async (id) => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/product_api/brand/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/product_api/brand/${id}/`,
     );
     setItem(data);
   };
@@ -135,7 +135,7 @@ const Brand = () => {
 
   const deleteBrand = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/product_api/brand/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/product_api/brand/${id}/`,
     );
     window.location.reload(false);
   };
@@ -183,10 +183,10 @@ const Brand = () => {
                               ></label>
                             </div>
                           </th>
-                          <th>ID</th>
-                          <th>Name</th>
-                          <th>Status</th>
-                          <th>Action</th>
+                          <th className="text-start">ID</th>
+                          <th className="text-center">Name</th>
+                          <th className="text-center">Status</th>
+                          <th className="text-end">Action</th>
                         </tr>
                       </thead>
 
@@ -208,13 +208,13 @@ const Brand = () => {
                                     ></label>
                                   </div>
                                 </td>
-                                <td>{index + 1}</td>
-                                <td>{item.name}</td>
-                                <td>
+                                <td className="text-start">{index + 1}</td>
+                                <td className="text-center">{item.name}</td>
+                                <td className="text-center">
                                   {item.status === true ? "Active" : "Inactive"}
                                 </td>
-                                <td>
-                                  <div className="d-flex gap-2">
+                                <td className="text-end">
+                                  <div className="d-flex justify-content-end align-items-center gap-2">
                                     <Tooltip title="view" arrow>
                                       <Link
                                         to="#!"
