@@ -73,7 +73,7 @@ const Courier = () => {
 
   const submitAddSupplierForm = async (
     values,
-    { setErrors, setSubmitting, resetForm }
+    { setErrors, setSubmitting, resetForm },
   ) => {
     try {
       setSubmitting(true);
@@ -120,7 +120,7 @@ const Courier = () => {
 
   const submitUpdateCourierForm = async (
     values,
-    { setErrors, setSubmitting }
+    { setErrors, setSubmitting },
   ) => {
     try {
       UpdateCourierFunc(values);
@@ -132,7 +132,7 @@ const Courier = () => {
 
   const updateCourier = async (id) => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/settings_api/courier/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/settings_api/courier/${id}/`,
     );
     setItem(data);
   };
@@ -144,7 +144,7 @@ const Courier = () => {
 
   const deleteCourier = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/settings_api/courier/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/settings_api/courier/${id}/`,
     );
     window.location.reload(false);
   };
@@ -192,13 +192,13 @@ const Courier = () => {
                               ></label>
                             </div>
                           </th>
-                          <th>ID</th>
-                          <th>Name</th>
-                          <th>Phone</th>
-                          <th>Email</th>
-                          <th>Amount</th>
-                          <th>Status</th>
-                          <th>Action</th>
+                          <th className="text-start">ID</th>
+                          <th className="text-center">Name</th>
+                          <th className="text-center">Phone</th>
+                          <th className="text-center">Email</th>
+                          <th className="text-center">Amount</th>
+                          <th className="text-center">Status</th>
+                          <th className="text-end">Action</th>
                         </tr>
                       </thead>
 
@@ -220,17 +220,17 @@ const Courier = () => {
                                     ></label>
                                   </div>
                                 </td>
-                                <td>{index + 1}</td>
+                                <td className="text-start">{index + 1}</td>
 
-                                <td>{item.name}</td>
-                                <td>{item.phone}</td>
-                                <td>{item.email}</td>
-                                <td>{item.amount}</td>
-                                <td>
+                                <td className="text-center">{item.name}</td>
+                                <td className="text-center">{item.phone}</td>
+                                <td className="text-center">{item.email}</td>
+                                <td className="text-center">{item.amount}</td>
+                                <td className="text-center">
                                   {item.status === true ? "Active" : "Inactive"}
                                 </td>
-                                <td>
-                                  <div className="d-flex gap-2">
+                                <td className="text-end">
+                                  <div className="d-flex justify-content-end align-items-center gap-2">
                                     <Tooltip title="view" arrow>
                                       <Link
                                         to="#!"

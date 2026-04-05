@@ -89,7 +89,7 @@ const Supplier = () => {
 
   const submitAddSupplierForm = async (
     values,
-    { setErrors, setSubmitting, resetForm }
+    { setErrors, setSubmitting, resetForm },
   ) => {
     try {
       setSubmitting(true);
@@ -143,7 +143,7 @@ const Supplier = () => {
 
   const submitUpdateSupplierForm = async (
     values,
-    { setErrors, setSubmitting }
+    { setErrors, setSubmitting },
   ) => {
     try {
       UpdateSupplierFunc(values);
@@ -156,7 +156,7 @@ const Supplier = () => {
   // === Update Supplier Function ===
   const updateSupplier = async (id) => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/settings_api/supplier/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/settings_api/supplier/${id}/`,
     );
     setItem(data);
     setShowLogo(data.logo);
@@ -168,7 +168,7 @@ const Supplier = () => {
       setShowLogo(
         item.logo.startsWith("http")
           ? item.logo
-          : `${process.env.REACT_APP_BASE_URL}${item.logo}`
+          : `${process.env.REACT_APP_BASE_URL}${item.logo}`,
       );
     }
   }, [item]);
@@ -180,7 +180,7 @@ const Supplier = () => {
 
   const deleteSupplier = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/settings_api/supplier/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/settings_api/supplier/${id}/`,
     );
     window.location.reload(false);
   };
@@ -228,15 +228,15 @@ const Supplier = () => {
                               ></label>
                             </div>
                           </th>
-                          <th>ID</th>
-                          <th>Logo</th>
-                          <th>Name</th>
-                          <th>Phone</th>
-                          <th>Email</th>
-                          <th>Address</th>
-                          <th>Company Name</th>
-                          <th>Status</th>
-                          <th>Action</th>
+                          <th className="text-start">ID</th>
+                          <th className="text-center">Logo</th>
+                          <th className="text-center">Name</th>
+                          <th className="text-center">Phone</th>
+                          <th className="text-center">Email</th>
+                          <th className="text-center">Address</th>
+                          <th className="text-center">Company Name</th>
+                          <th className="text-center">Status</th>
+                          <th className="text-end">Action</th>
                         </tr>
                       </thead>
 
@@ -258,9 +258,9 @@ const Supplier = () => {
                                     ></label>
                                   </div>
                                 </td>
-                                <td>{index + 1}</td>
-                                <td>
-                                  <div className="d-flex align-items-center gap-2">
+                                <td className="text-start">{index + 1}</td>
+                                <td className="text-center">
+                                  <div className="d-flex align-items-center justify-content-center">
                                     <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                       <img
                                         src={item.logo}
@@ -270,16 +270,18 @@ const Supplier = () => {
                                     </div>
                                   </div>
                                 </td>
-                                <td>{item.name}</td>
-                                <td>{item.phone}</td>
-                                <td>{item.email}</td>
-                                <td>{item.address}</td>
-                                <td>{item.company_name}</td>
-                                <td>
+                                <td className="text-center">{item.name}</td>
+                                <td className="text-center">{item.phone}</td>
+                                <td className="text-center">{item.email}</td>
+                                <td className="text-center">{item.address}</td>
+                                <td className="text-center">
+                                  {item.company_name}
+                                </td>
+                                <td className="text-center">
                                   {item.status === true ? "Active" : "Inactive"}
                                 </td>
-                                <td>
-                                  <div className="d-flex gap-2">
+                                <td className="text-end">
+                                  <div className="d-flex justify-content-end align-items-center gap-2">
                                     <Tooltip title="view" arrow>
                                       <Link
                                         to="#!"
@@ -622,7 +624,7 @@ const Supplier = () => {
                                       onChange={(event) => {
                                         setFieldValue(
                                           "logo",
-                                          event.currentTarget.files[0]
+                                          event.currentTarget.files[0],
                                         );
                                         onLogoChange(event);
                                       }}
@@ -945,7 +947,7 @@ const Supplier = () => {
                                       onChange={(event) => {
                                         setFieldValue(
                                           "logo",
-                                          event.currentTarget.files[0]
+                                          event.currentTarget.files[0],
                                         );
                                         onLogoChange(event);
                                       }}

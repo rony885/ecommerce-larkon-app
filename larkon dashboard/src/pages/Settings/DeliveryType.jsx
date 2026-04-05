@@ -70,7 +70,7 @@ const DeliveryType = () => {
 
   const submitAddDeliveryTypeForm = async (
     values,
-    { setErrors, setSubmitting, resetForm }
+    { setErrors, setSubmitting, resetForm },
   ) => {
     try {
       setSubmitting(true);
@@ -107,7 +107,7 @@ const DeliveryType = () => {
       .then((response) => {
         setMessage(
           response.success,
-          "Delivery Type is successfully updated..."
+          "Delivery Type is successfully updated...",
         );
         window.location.reload(false);
       })
@@ -118,7 +118,7 @@ const DeliveryType = () => {
 
   const submitUpdateDeliveryTypeForm = async (
     values,
-    { setErrors, setSubmitting }
+    { setErrors, setSubmitting },
   ) => {
     try {
       UpdateDeliveryTypeFunc(values);
@@ -130,7 +130,7 @@ const DeliveryType = () => {
 
   const updateDeliveryType = async (id) => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/settings_api/delivery_type/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/settings_api/delivery_type/${id}/`,
     );
     setItem(data);
   };
@@ -142,7 +142,7 @@ const DeliveryType = () => {
 
   const deleteDeliveryType = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/settings_api/delivery_type/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/settings_api/delivery_type/${id}/`,
     );
     window.location.reload(false);
   };
@@ -190,12 +190,12 @@ const DeliveryType = () => {
                               ></label>
                             </div>
                           </th>
-                          <th>ID</th>
-                          <th>Name</th>
-                          <th>Duration</th>
-                          <th>Cost</th>
-                          <th>Status</th>
-                          <th>Action</th>
+                          <th className="text-start">ID</th>
+                          <th className="text-center">Name</th>
+                          <th className="text-center">Duration</th>
+                          <th className="text-center">Cost</th>
+                          <th className="text-center">Status</th>
+                          <th className="text-end">Action</th>
                         </tr>
                       </thead>
 
@@ -217,16 +217,15 @@ const DeliveryType = () => {
                                     ></label>
                                   </div>
                                 </td>
-                                <td>{index + 1}</td>
-
-                                <td>{item.name}</td>
-                                <td>{item.duration}</td>
-                                <td>{item.cost}</td>
-                                <td>
+                                <td className="text-start">{index + 1}</td>
+                                <td className="text-center">{item.name}</td>
+                                <td className="text-center">{item.duration}</td>
+                                <td className="text-center">{item.cost}</td>
+                                <td className="text-center">
                                   {item.status === true ? "Active" : "Inactive"}
                                 </td>
-                                <td>
-                                  <div className="d-flex gap-2">
+                                <td className="text-end">
+                                  <div className="d-flex justify-content-end align-items-center gap-2">
                                     <Tooltip title="view" arrow>
                                       <Link
                                         to="#!"

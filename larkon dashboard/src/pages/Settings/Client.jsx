@@ -86,7 +86,7 @@ const Client = () => {
 
   const submitAddClientForm = async (
     values,
-    { setErrors, setSubmitting, resetForm }
+    { setErrors, setSubmitting, resetForm },
   ) => {
     try {
       setSubmitting(true);
@@ -138,7 +138,7 @@ const Client = () => {
 
   const submitUpdateSupplierForm = async (
     values,
-    { setErrors, setSubmitting }
+    { setErrors, setSubmitting },
   ) => {
     try {
       UpdateClientFunc(values);
@@ -151,7 +151,7 @@ const Client = () => {
   // === Update Client Function ===
   const updateClient = async (id) => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/settings_api/client/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/settings_api/client/${id}/`,
     );
     setItem(data);
     setShowImage(data.image);
@@ -163,7 +163,7 @@ const Client = () => {
       setShowImage(
         item.image.startsWith("http")
           ? item.image
-          : `${process.env.REACT_APP_BASE_URL}${item.image}`
+          : `${process.env.REACT_APP_BASE_URL}${item.image}`,
       );
     }
   }, [item]);
@@ -175,7 +175,7 @@ const Client = () => {
 
   const deleteClient = async (id) => {
     await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/settings_api/client/${id}/`
+      `${process.env.REACT_APP_BASE_URL}/settings_api/client/${id}/`,
     );
     window.location.reload(false);
   };
@@ -223,15 +223,15 @@ const Client = () => {
                               ></label>
                             </div>
                           </th>
-                          <th>ID</th>
-                          <th>image</th>
-                          <th>Name</th>
-                          <th>Phone</th>
-                          <th>Email</th>
-                          <th>Address</th>
-                          <th>Company Name</th>
-                          <th>Status</th>
-                          <th>Action</th>
+                          <th className="text-start">ID</th>
+                          <th className="text-center">image</th>
+                          <th className="text-center">Name</th>
+                          <th className="text-center">Phone</th>
+                          <th className="text-center">Email</th>
+                          <th className="text-center">Address</th>
+                          <th className="text-center">Company Name</th>
+                          <th className="text-center">Status</th>
+                          <th className="text-end">Action</th>
                         </tr>
                       </thead>
 
@@ -253,9 +253,9 @@ const Client = () => {
                                     ></label>
                                   </div>
                                 </td>
-                                <td>{index + 1}</td>
-                                <td>
-                                  <div className="d-flex align-items-center gap-2">
+                                <td className="text-start">{index + 1}</td>
+                                <td className="text-center">
+                                  <div className="d-flex align-items-center justify-content-center">
                                     <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                       <img
                                         src={item.image}
@@ -265,17 +265,21 @@ const Client = () => {
                                     </div>
                                   </div>
                                 </td>
-                                <td>{item.name}</td>
-                                <td>{item.phone}</td>
-                                <td>{item.email}</td>
-                                <td>{item.address}</td>
+                                <td className="text-center">{item.name}</td>
+                                <td className="text-center">{item.phone}</td>
+                                <td className="text-center">{item.email}</td>
+                                <td className="text-center">{item.address}</td>
                                 {/* <td>{item.company_name || "N/A"}</td> */}
-                                <td>{item.company_name ? item.company_name : "N/A"}</td>
-                                <td>
+                                <td className="text-center">
+                                  {item.company_name
+                                    ? item.company_name
+                                    : "N/A"}
+                                </td>
+                                <td className="text-center">
                                   {item.status === true ? "Active" : "Inactive"}
                                 </td>
-                                <td>
-                                  <div className="d-flex gap-2">
+                                <td className="text-end">
+                                  <div className="d-flex justify-content-end align-items-center gap-2">
                                     <Tooltip title="view" arrow>
                                       <Link
                                         to="#!"
@@ -562,7 +566,7 @@ const Client = () => {
                                       onChange={(event) => {
                                         setFieldValue(
                                           "image",
-                                          event.currentTarget.files[0]
+                                          event.currentTarget.files[0],
                                         );
                                         onimageChange(event);
                                       }}
@@ -829,7 +833,7 @@ const Client = () => {
                                       onChange={(event) => {
                                         setFieldValue(
                                           "image",
-                                          event.currentTarget.files[0]
+                                          event.currentTarget.files[0],
                                         );
                                         onimageChange(event);
                                       }}
