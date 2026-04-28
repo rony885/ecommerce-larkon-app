@@ -47,6 +47,7 @@ const UL = ({ handleTogglle }) => {
       "/delivery-type": "setting",
       "/client": "setting",
       "/general-settings": "setting",
+      "/clock": "setting",
 
       // Blogs
       "/blogs": "blogs",
@@ -103,6 +104,7 @@ const UL = ({ handleTogglle }) => {
       "/delivery-type": "delivery-type",
       "/client": "client",
       "/general-settings": "general-settings",
+      "/clock": "clock",
 
       // Blogs
       "/blogs": "blogs",
@@ -399,6 +401,17 @@ const UL = ({ handleTogglle }) => {
                   to="/general-settings"
                 >
                   General Settings
+                </Link>
+              </li>
+              <li className="sub-nav-item">
+                <Link
+                  className={`sub-nav-link  ${
+                    activeSubMenu === "clock" ? "active" : ""
+                  }`}
+                  onClick={handleTogglle}
+                  to="/clock"
+                >
+                  Clock
                 </Link>
               </li>
             </ul>

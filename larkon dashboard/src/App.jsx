@@ -46,6 +46,7 @@ import Courier from "./pages/Settings/Courier";
 import DeliveryType from "./pages/Settings/DeliveryType";
 import Client from "./pages/Settings/Client";
 import { useApiContext } from "./context/ApiContext";
+import Clock from "./pages/Settings/Clock";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -193,6 +194,7 @@ function App() {
             <Route path="/delivery-type" element={<DeliveryType />}></Route>
             <Route path="/client" element={<Client />}></Route>
             <Route path="/general-settings" element={<Settings />}></Route>
+            <Route path="/clock" element={<Clock />}></Route>
 
             <Route path="/order-list" element={<OrderList />}></Route>
             <Route path="/add-order" element={<AddOrder />}></Route>

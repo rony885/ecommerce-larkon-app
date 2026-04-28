@@ -46,131 +46,130 @@ const ProductsList = () => {
                   Product Add
                 </Link>
               </div>
-              <div>
-                <div className="table-responsive">
-                  <table className="table align-middle mb-0 table-hover table-centered">
-                    <thead className="bg-light-subtle">
-                      <tr>
-                        <th style={{ width: "20px" }}>
-                          <div className="form-check">
-                            <input
-                              type="checkbox"
-                              className="form-check-input"
-                              id="customCheck1"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheck1"
-                            ></label>
-                          </div>
-                        </th>
-                        <th className="text-start">Id</th>
-                        <th className="text-center">Image</th>
-                        <th className="text-center">Product Name</th>
-                        <th className="text-center">Category</th>
-                        <th className="text-center">Brand</th>
-                        <th className="text-center">Unit</th>
-                        <th className="text-center">Price</th>
-                        <th className="text-center">Stock</th>
-                        <th className="text-center">Status</th>
-                        <th className="text-center">Description</th>
-                        <th className="text-end">Action</th>
-                      </tr>
-                    </thead>
 
-                    <tbody>
-                      {product &&
-                        product.map((item, index) => {
-                          return (
-                            <tr key={index}>
-                              <td>
-                                <div className="form-check">
-                                  <input
-                                    type="checkbox"
-                                    className="form-check-input"
-                                    id="customCheck2"
+              <div className="table-responsive">
+                <table className="table align-middle mb-0 table-hover table-centered">
+                  <thead className="bg-light-subtle">
+                    <tr>
+                      <th style={{ width: "20px" }}>
+                        <div className="form-check">
+                          <input
+                            type="checkbox"
+                            className="form-check-input"
+                            id="customCheck1"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="customCheck1"
+                          ></label>
+                        </div>
+                      </th>
+                      <th className="text-start">Id</th>
+                      <th className="text-center">Image</th>
+                      <th className="text-center">Product Name</th>
+                      <th className="text-center">Category</th>
+                      <th className="text-center">Brand</th>
+                      <th className="text-center">Unit</th>
+                      <th className="text-center">Price</th>
+                      <th className="text-center">Stock</th>
+                      <th className="text-center">Status</th>
+                      <th className="text-center">Description</th>
+                      <th className="text-end">Action</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {product &&
+                      product.map((item, index) => {
+                        return (
+                          <tr key={index}>
+                            <td>
+                              <div className="form-check">
+                                <input
+                                  type="checkbox"
+                                  className="form-check-input"
+                                  id="customCheck2"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="customCheck2"
+                                ></label>
+                              </div>
+                            </td>
+                            <td className="text-start">{index + 1}</td>
+                            <td className="text-center">
+                              <div className="d-flex align-items-center justify-content-center">
+                                <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
+                                  <img
+                                    src={item.image}
+                                    alt="imagee"
+                                    className="avatar-md"
                                   />
-                                  <label
-                                    className="form-check-label"
-                                    htmlFor="customCheck2"
-                                  ></label>
                                 </div>
-                              </td>
-                              <td className="text-start">{index + 1}</td>
-                              <td className="text-center">
-                                <div className="d-flex align-items-center justify-content-center">
-                                  <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
-                                    <img
-                                      src={item.image}
-                                      alt="imagee"
-                                      className="avatar-md"
-                                    />
-                                  </div>
-                                </div>
-                              </td>
-                              <td className="text-center">{item.name}</td>
-                              <td className="text-center">
-                                {item.category.name}
-                              </td>
-                              <td className="text-center">{item.brand.name}</td>
-                              <td className="text-center">{item.unit.name}</td>
-                              <td className="text-center">{item.price}</td>
-                              <td className="text-center">{item.stock}</td>
-                              <td className="text-center">
-                                {item.status === true ? "Active" : "Inactive"}
-                              </td>
-                              <td>
-                                {item.description
-                                  ? `${item.description.slice(0, 50)}...`
-                                  : "----"}
-                              </td>
+                              </div>
+                            </td>
+                            <td className="text-center">{item.name}</td>
+                            <td className="text-center">
+                              {item.category.name}
+                            </td>
+                            <td className="text-center">{item.brand.name}</td>
+                            <td className="text-center">{item.unit.name}</td>
+                            <td className="text-center">{item.price}</td>
+                            <td className="text-center">{item.stock}</td>
+                            <td className="text-center">
+                              {item.status === true ? "Active" : "Inactive"}
+                            </td>
+                            <td>
+                              {item.description
+                                ? `${item.description.slice(0, 50)}...`
+                                : "----"}
+                            </td>
 
-                              <td className="text-end">
-                                <div className="d-flex justify-content-end align-items-center gap-2">
-                                  <Tooltip title="View" arrow>
-                                    <Link
-                                      to="#!"
-                                      className="btn btn-light btn-sm"
-                                    >
-                                      <iconify-icon
-                                        icon="solar:eye-broken"
-                                        className="align-middle fs-18"
-                                      ></iconify-icon>
-                                    </Link>
-                                  </Tooltip>
+                            <td className="text-end">
+                              <div className="d-flex justify-content-end align-items-center gap-2">
+                                <Tooltip title="View" arrow>
+                                  <Link
+                                    to="#!"
+                                    className="btn btn-light btn-sm"
+                                  >
+                                    <iconify-icon
+                                      icon="solar:eye-broken"
+                                      className="align-middle fs-18"
+                                    ></iconify-icon>
+                                  </Link>
+                                </Tooltip>
 
-                                  <Tooltip title="Edit" arrow>
-                                    <Link
-                                      to={`/product-edit/${item.id}`}
-                                      className="btn btn-soft-primary btn-sm"
-                                    >
-                                      <iconify-icon
-                                        icon="solar:pen-2-broken"
-                                        className="align-middle fs-18"
-                                      ></iconify-icon>
-                                    </Link>
-                                  </Tooltip>
+                                <Tooltip title="Edit" arrow>
+                                  <Link
+                                    to={`/product-edit/${item.id}`}
+                                    className="btn btn-soft-primary btn-sm"
+                                  >
+                                    <iconify-icon
+                                      icon="solar:pen-2-broken"
+                                      className="align-middle fs-18"
+                                    ></iconify-icon>
+                                  </Link>
+                                </Tooltip>
 
-                                  <Tooltip title="Delete" arrow>
-                                    <button className="btn btn-soft-danger btn-sm">
-                                      <iconify-icon
-                                        icon="solar:trash-bin-minimalistic-2-broken"
-                                        className="align-middle fs-18"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#deleteModal"
-                                        type="button"
-                                        onClick={() => getId(item.id)}
-                                      ></iconify-icon>
-                                    </button>
-                                  </Tooltip>
-                                </div>
-                              </td>
-                            </tr>
-                          );
-                        })}
-                    </tbody>
-                  </table>
-                </div>
+                                <Tooltip title="Delete" arrow>
+                                  <button className="btn btn-soft-danger btn-sm">
+                                    <iconify-icon
+                                      icon="solar:trash-bin-minimalistic-2-broken"
+                                      className="align-middle fs-18"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                      type="button"
+                                      onClick={() => getId(item.id)}
+                                    ></iconify-icon>
+                                  </button>
+                                </Tooltip>
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                  </tbody>
+                </table>
               </div>
 
               <div className="card-footer border-top">
