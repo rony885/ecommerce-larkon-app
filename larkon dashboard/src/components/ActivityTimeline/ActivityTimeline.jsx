@@ -47,7 +47,7 @@ const ActivityTimeline = () => {
                       <div className="col-lg-6 border-end border-light">
                         <div className="d-flex align-items-center gap-2">
                           <i className="bx bxl-figma fs-20 text-red"></i>
-                          <Link to="#!" className="text-dark fw-medium">
+                          <Link to="#" className="text-dark fw-medium">
                             Concept.fig
                           </Link>
                         </div>
@@ -55,7 +55,7 @@ const ActivityTimeline = () => {
                       <div className="col-lg-6">
                         <div className="d-flex align-items-center gap-2">
                           <i className="bx bxl-file-doc fs-20 text-success"></i>
-                          <Link to="#!" className="text-dark fw-medium">
+                          <Link to="#" className="text-dark fw-medium">
                             larkon.docs
                           </Link>
                         </div>
@@ -87,12 +87,12 @@ const ActivityTimeline = () => {
                     </span>
                   </p>
                   <div className="d-flex align-items-center gap-3 mt-1 bg-light bg-opacity-50 p-2 rounded-2">
-                    <Link to="#!" className="fw-medium text-dark">
+                    <Link to="#" className="fw-medium text-dark">
                       UI/UX Figma Design
                     </Link>
                     <div className="ms-auto">
                       <Link
-                        to="#!"
+                        to="#"
                         className="fw-medium text-primary fs-18"
                         data-bs-toggle="tooltip"
                         title="Download"
@@ -124,7 +124,7 @@ const ActivityTimeline = () => {
                     E-commerce & Marketing pages.
                   </p>
                   <div className="mt-2">
-                    <Link to="#!" className="btn btn-light btn-sm">
+                    <Link to="#" className="btn btn-light btn-sm">
                       Download Zip
                     </Link>
                   </div>
@@ -147,7 +147,7 @@ const ActivityTimeline = () => {
                   </h5>
                   <div className="row g-2 mt-2">
                     <div className="col-lg-4">
-                      <Link to="#!">
+                      <Link to="#">
                         <img
                           src="/assets/images/small/img-6.jpg"
                           alt="attachment-1"
@@ -156,7 +156,7 @@ const ActivityTimeline = () => {
                       </Link>
                     </div>
                     <div className="col-lg-4">
-                      <Link to="#!">
+                      <Link to="#">
                         <img
                           src="/assets/images/small/img-3.jpg"
                           alt="attachment-2"
@@ -165,7 +165,7 @@ const ActivityTimeline = () => {
                       </Link>
                     </div>
                     <div className="col-lg-4">
-                      <Link to="#!">
+                      <Link to="#">
                         <img
                           src="/assets/images/small/img-4.jpg"
                           alt="attachment-3"
@@ -225,7 +225,7 @@ const ActivityTimeline = () => {
             </div>
 
             {/* View All Button */}
-            <Link to="#!" className="btn btn-outline-dark w-100 mt-3">
+            <Link to="#" className="btn btn-outline-dark w-100 mt-3">
               View All
             </Link>
           </div>

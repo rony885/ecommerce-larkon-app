@@ -25,7 +25,7 @@ const AddSeller = () => {
                       <span className="text-muted fs-13 ms-1">(Fashion)</span>
                     </h4>
                     <div>
-                      <Link to="#!" className="link-primary fs-16 fw-medium">
+                      <Link to="#" className="link-primary fs-16 fw-medium">
                         www.zarafashion.co
                       </Link>
                     </div>
@@ -106,7 +106,7 @@ const AddSeller = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="col-xl-9 col-lg-8">
             <div className="card">
               <div className="card-header">
@@ -115,7 +115,6 @@ const AddSeller = () => {
               <div className="card-body">
                 {/* <!-- File Upload --> */}
                 <form
-                  method="post"
                   className="dropzone"
                   id="myAwesomeDropzone"
                   data-plugin="dropzone"
@@ -360,12 +359,12 @@ const AddSeller = () => {
             <div className="p-3 bg-light mb-3 rounded">
               <div className="row justify-content-end g-2">
                 <div className="col-lg-2">
-                  <Link to="#!" className="btn btn-outline-secondary w-100">
+                  <Link to="#" className="btn btn-outline-secondary w-100">
                     Save Change
                   </Link>
                 </div>
                 <div className="col-lg-2">
-                  <Link to="#!" className="btn btn-primary w-100">
+                  <Link to="#" className="btn btn-primary w-100">
                     Cancel
                   </Link>
                 </div>

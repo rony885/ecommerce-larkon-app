@@ -29,13 +29,13 @@ const OrderDetails = () => {
                         </p>
                       </div>
                       <div>
-                        <Link to="#!" className="btn btn-outline-secondary">
+                        <Link to="#" className="btn btn-outline-secondary">
                           Refund
                         </Link>
-                        <Link to="#!" className="btn btn-outline-secondary">
+                        <Link to="#" className="btn btn-outline-secondary">
                           Return
                         </Link>
-                        <Link to="#!" className="btn btn-primary">
+                        <Link to="#" className="btn btn-primary">
                           Edit Order
                         </Link>
                       </div>
@@ -142,7 +142,7 @@ const OrderDetails = () => {
                       <span className="text-dark fw-medium">Apr 25 , 2024</span>
                     </p>
                     <div>
-                      <Link to="#!" className="btn btn-primary">
+                      <Link to="#" className="btn btn-primary">
                         Make As Ready To Ship
                       </Link>
                     </div>
@@ -178,7 +178,7 @@ const OrderDetails = () => {
                                 </div>
                                 <div>
                                   <Link
-                                    to="#!"
+                                    to="#"
                                     className="text-dark fw-medium fs-15"
                                   >
                                     Men Black Slim Fit T-shirt
@@ -206,14 +206,14 @@ const OrderDetails = () => {
                               <div className="d-flex align-items-center gap-2">
                                 <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                   <img
-                                    src="assets/images/product/p-5.png"
+                                    src="/assets/images/product/p-5.png"
                                     alt=""
                                     className="avatar-md"
                                   />
                                 </div>
                                 <div>
                                   <Link
-                                    to="#!"
+                                    to="#"
                                     className="text-dark fw-medium fs-15"
                                   >
                                     Dark Green Cargo Pent
@@ -241,14 +241,14 @@ const OrderDetails = () => {
                               <div className="d-flex align-items-center gap-2">
                                 <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                   <img
-                                    src="assets/images/product/p-8.png"
+                                    src="/assets/images/product/p-8.png"
                                     alt=""
                                     className="avatar-md"
                                   />
                                 </div>
                                 <div>
                                   <Link
-                                    to="#!"
+                                    to="#"
                                     className="text-dark fw-medium fs-15"
                                   >
                                     Men Dark Brown Wallet
@@ -283,7 +283,7 @@ const OrderDetails = () => {
                                 </div>
                                 <div>
                                   <Link
-                                    to="#!"
+                                    to="#"
                                     className="text-dark fw-medium fs-15"
                                   >
                                     Kid's Yellow T-shirt
@@ -354,11 +354,11 @@ const OrderDetails = () => {
                               </h5>
                               <p className="mb-2">
                                 Invoice email was sent to{" "}
-                                <Link to="#!" className="link-primary">
+                                <Link to="#" className="link-primary">
                                   hello@dundermuffilin.com
                                 </Link>
                               </p>
-                              <Link to="#!" className="btn btn-light">
+                              <Link to="#" className="btn btn-light">
                                 Resend Invoice
                               </Link>
                             </div>
@@ -379,7 +379,7 @@ const OrderDetails = () => {
                               <p className="mb-2">
                                 Invoice created by Gaston Lapierre
                               </p>
-                              <Link to="#!" className="btn btn-primary">
+                              <Link to="#" className="btn btn-primary">
                                 Download Invoice
                               </Link>
                             </div>
@@ -422,25 +422,25 @@ const OrderDetails = () => {
                                 4 Order conform by Gaston Lapierre
                               </h5>
                               <Link
-                                to="#!"
+                                to="#"
                                 className="badge bg-light text-dark fw-normal  px-2 py-1 fs-13"
                               >
                                 Order 1
                               </Link>
                               <Link
-                                to="#!"
+                                to="#"
                                 className="badge bg-light text-dark fw-normal  px-2 py-1 fs-13"
                               >
                                 Order 2
                               </Link>
                               <Link
-                                to="#!"
+                                to="#"
                                 className="badge bg-light text-dark fw-normal  px-2 py-1 fs-13"
                               >
                                 Order 3
                               </Link>
                               <Link
-                                to="#!"
+                                to="#"
                                 className="badge bg-light text-dark fw-normal  px-2 py-1 fs-13"
                               >
                                 Order 4
@@ -654,7 +654,7 @@ const OrderDetails = () => {
                   />
                   <div>
                     <p className="mb-1">Gaston Lapierre</p>
-                    <Link to="#!" className="link-primary fw-medium">
+                    <Link to="#" className="link-primary fw-medium">
                       hello@dundermuffilin.com
                     </Link>
                   </div>
@@ -662,7 +662,7 @@ const OrderDetails = () => {
                 <div className="d-flex justify-content-between mt-3">
                   <h5 className="">Contact Number</h5>
                   <div>
-                    <Link to="#!">
+                    <Link to="#">
                       <i className="bx bx-edit-alt fs-18"></i>
                     </Link>
                   </div>
@@ -672,7 +672,7 @@ const OrderDetails = () => {
                 <div className="d-flex justify-content-between mt-3">
                   <h5 className="">Shipping Address</h5>
                   <div>
-                    <Link to="#!">
+                    <Link to="#">
                       <i className="bx bx-edit-alt fs-18"></i>
                     </Link>
                   </div>
@@ -689,7 +689,7 @@ const OrderDetails = () => {
                 <div className="d-flex justify-content-between mt-3">
                   <h5 className="">Billing Address</h5>
                   <div>
-                    <Link to="#!">
+                    <Link to="#">
                       <i className="bx bx-edit-alt fs-18"></i>
                     </Link>
                   </div>
