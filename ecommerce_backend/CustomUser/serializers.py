@@ -3,29 +3,72 @@ from rest_framework import serializers
 from .models import CustomUser
 from django.contrib.auth import authenticate
 
+# class UserSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = CustomUser
+#         fields = ['id', 'username', 'email', 'first_name', 'last_name', 'phone', 'address']
+
 class UserSerializer(serializers.ModelSerializer):
+
+    image = serializers.SerializerMethodField()
     class Meta:
         model = CustomUser
-        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'phone', 'address']
+        fields = [
+            'id',
+            'username',
+            'email',
+            'first_name',
+            'last_name',
+            'phone',
+            'address',
+            'image'
+        ]
+
+    def get_image(self, obj):
+        request = self.context.get("request")
+
+        if obj.image:
+            if request:
+                return request.build_absolute_uri(obj.image.url)
+            return obj.image.url
+
+        return None
+
+# class UserRegisterSerializer(serializers.ModelSerializer):
+#     password = serializers.CharField(write_only=True)
+
+#     class Meta:
+#         model = CustomUser
+#         fields = ['username', 'email', 'first_name', 'last_name', 'phone', 'address', 'password']
+
+#     def create(self, validated_data):
+#         user = CustomUser.objects.create_user(
+#             username=validated_data['username'],
+#             email=validated_data.get('email', ''),
+#             first_name=validated_data.get('first_name', ''),
+#             last_name=validated_data.get('last_name', ''),
+#             phone=validated_data.get('phone', ''),
+#             address=validated_data.get('address', ''),
+#             password=validated_data['password'],
+#         )
+#         return user
 
 class UserRegisterSerializer(serializers.ModelSerializer):
+
     password = serializers.CharField(write_only=True)
 
     class Meta:
         model = CustomUser
-        fields = ['username', 'email', 'first_name', 'last_name', 'phone', 'address', 'password']
-
-    def create(self, validated_data):
-        user = CustomUser.objects.create_user(
-            username=validated_data['username'],
-            email=validated_data.get('email', ''),
-            first_name=validated_data.get('first_name', ''),
-            last_name=validated_data.get('last_name', ''),
-            phone=validated_data.get('phone', ''),
-            address=validated_data.get('address', ''),
-            password=validated_data['password'],
-        )
-        return user
+        fields = [
+            'username',
+            'email',
+            'first_name',
+            'last_name',
+            'phone',
+            'address',
+            'image',
+            'password'
+        ]
 
 class UserLoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
@@ -48,4 +91,6 @@ class UserLoginSerializer(serializers.Serializer):
 
         data["user"] = user
         return data
+    
+    
 

@@ -274,7 +274,8 @@ const Header = ({ handleTogglle, c_user, logoutUser }) => {
                   <img
                     className="rounded-circle"
                     width="32"
-                    src="/assets/images/users/avatar-1.jpg"
+                    // src="/assets/images/users/avatar-1.jpg"
+                      src={c_user?.image || "/assets/images/users/avatar-1.jpg"}
                     alt="avatar-3"
                   />
                 </span>
