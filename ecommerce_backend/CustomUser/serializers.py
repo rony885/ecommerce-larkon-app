@@ -10,7 +10,8 @@ from django.contrib.auth import authenticate
 
 class UserSerializer(serializers.ModelSerializer):
 
-    image = serializers.SerializerMethodField()
+    image = serializers.ImageField(required=False, allow_null=True)
+
     class Meta:
         model = CustomUser
         fields = [
@@ -54,7 +55,6 @@ class UserSerializer(serializers.ModelSerializer):
 #         return user
 
 class UserRegisterSerializer(serializers.ModelSerializer):
-
     password = serializers.CharField(write_only=True)
 
     class Meta:
@@ -70,6 +70,16 @@ class UserRegisterSerializer(serializers.ModelSerializer):
             'password'
         ]
 
+    def create(self, validated_data):
+        return CustomUser.objects.create_user(
+            username=validated_data['username'],
+            email=validated_data.get('email', ''),
+            first_name=validated_data.get('first_name', ''),
+            last_name=validated_data.get('last_name', ''),
+            phone=validated_data.get('phone', ''),
+            address=validated_data.get('address', ''),
+            password=validated_data['password'],
+        )
 class UserLoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(write_only=True)
