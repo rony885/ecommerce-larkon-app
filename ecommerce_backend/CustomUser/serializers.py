@@ -80,6 +80,7 @@ class UserRegisterSerializer(serializers.ModelSerializer):
             address=validated_data.get('address', ''),
             password=validated_data['password'],
         )
+        
 class UserLoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(write_only=True)
@@ -103,4 +104,3 @@ class UserLoginSerializer(serializers.Serializer):
         return data
     
     
-
