@@ -9,9 +9,7 @@ from django.contrib.auth import authenticate
 #         fields = ['id', 'username', 'email', 'first_name', 'last_name', 'phone', 'address']
 
 class UserSerializer(serializers.ModelSerializer):
-
-    image = serializers.ImageField(required=False, allow_null=True)
-
+    image = serializers.SerializerMethodField()
     class Meta:
         model = CustomUser
         fields = [
@@ -22,11 +20,16 @@ class UserSerializer(serializers.ModelSerializer):
             'last_name',
             'phone',
             'address',
-            'image'
+            'image',
+            'is_active',
+            'is_staff',
+            'is_superuser',
+            'date_joined',
+            'last_login',
         ]
 
     def get_image(self, obj):
-        request = self.context.get("request")
+        request = self.context.get('request')
 
         if obj.image:
             if request:
