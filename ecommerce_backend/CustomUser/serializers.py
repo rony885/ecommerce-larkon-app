@@ -24,8 +24,8 @@ class UserSerializer(serializers.ModelSerializer):
             'is_active',
             'is_staff',
             'is_superuser',
-            'date_joined',
-            'last_login',
+            'created_at',
+            'updated_at',
         ]
 
     def get_image(self, obj):

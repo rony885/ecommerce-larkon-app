@@ -25,10 +25,18 @@ from .models import CustomUser
 class CustomUserAdmin(UserAdmin):
 
     list_display = (
+        # 'username',
+        # 'email',
+        # 'phone',
+        # 'is_staff'
         'username',
         'email',
+        'first_name',
+        'last_name',
         'phone',
-        'is_staff'
+        'is_staff',
+        'is_superuser',
+        'is_active',
     )
 
     fieldsets = (
@@ -57,8 +65,8 @@ class CustomUserAdmin(UserAdmin):
 
         ('Important dates', {
             'fields': (
-                'last_login',
-                'date_joined'
+                'created_at',
+                'updated_at'
             )
         }),
     )
