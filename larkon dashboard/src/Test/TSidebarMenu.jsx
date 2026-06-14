@@ -1,28 +1,27 @@
-/* eslint-disable no-script-url */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SidebarMenu = () => {
   return (
     <div className="main-nav">
       {/* <!-- Sidebar Logo --> */}
       <div className="logo-box">
-        <a href="index.html" className="logo-dark">
+        <Link to="/" className="logo-dark">
           <img
-            src="assets/images/logo-sm.png"
+            src="/assets/images/logo-sm.png"
             className="logo-sm"
             alt="logo sm"
           />
           <img
-            src="assets/images/logo-dark.png"
+            src="/assets/images/logo-dark.png"
             className="logo-lg"
             alt="logo dark"
           />
-        </a>
+        </Link>
 
-        <a href="index.html" className="logo-light">
+        <Link to="/" className="logo-light">
           <img
-            src="assets/images/logo-sm.png"
+            src="/assets/images/logo-sm.png"
             className="logo-sm"
             alt="logo sm"
           />
@@ -31,7 +30,7 @@ const SidebarMenu = () => {
             className="logo-lg"
             alt="logo light"
           />
-        </a>
+        </Link>
       </div>
 
       {/* <!-- Menu Toggle Button (sm-hover) --> */}
@@ -51,18 +50,18 @@ const SidebarMenu = () => {
           <li className="menu-title">General</li>
 
           <li className="nav-item">
-            <a className="nav-link" href="index.html">
+            <Link className="nav-link" to="/">
               <span className="nav-icon">
                 <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Dashboard </span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarProducts"
+              to="#sidebarProducts"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -72,42 +71,42 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:t-shirt-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Products </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarProducts">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="product-list.html">
+                  <Link className="sub-nav-link" to="product-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="product-grid.html">
+                  <Link className="sub-nav-link" to="product-grid">
                     Grid
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="product-details.html">
+                  <Link className="sub-nav-link" to="product-details">
                     Details
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="product-edit.html">
+                  <Link className="sub-nav-link" to="product-edit">
                     Edit
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="product-add.html">
+                  <Link className="sub-nav-link" to="product-add">
                     Create
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarCategory"
+              to="#sidebarCategory"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -117,32 +116,32 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Category </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarCategory">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="category-list.html">
+                  <Link className="sub-nav-link" to="category-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="category-edit.html">
+                  <Link className="sub-nav-link" to="category-edit">
                     Edit
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="category-add.html">
+                  <Link className="sub-nav-link" to="category-add">
                     Create
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarInventory"
+              to="#sidebarInventory"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -152,30 +151,27 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Inventory </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarInventory">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="inventory-warehouse.html">
+                  <Link className="sub-nav-link" to="inventory-warehouse">
                     Warehouse
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a
-                    className="sub-nav-link"
-                    href="inventory-received-orders.html"
-                  >
+                  <Link className="sub-nav-link" to="inventory-received-orders">
                     Received Orders
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarOrders"
+              to="#sidebarOrders"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -185,37 +181,37 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:bag-smile-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Orders </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarOrders">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="orders-list.html">
+                  <Link className="sub-nav-link" to="orders-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="order-detail.html">
+                  <Link className="sub-nav-link" to="order-detail">
                     Details
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="order-cart.html">
+                  <Link className="sub-nav-link" to="order-cart">
                     Cart
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="order-checkout.html">
+                  <Link className="sub-nav-link" to="order-checkout">
                     Check Out
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarPurchases"
+              to="#sidebarPurchases"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -225,32 +221,32 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:card-send-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Purchases </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarPurchases">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="purchase-list.html">
+                  <Link className="sub-nav-link" to="purchase-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="purchase-order.html">
+                  <Link className="sub-nav-link" to="purchase-order">
                     Order
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="purchase-returns.html">
+                  <Link className="sub-nav-link" to="purchase-returns">
                     Return
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarAttributes"
+              to="#sidebarAttributes"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -260,32 +256,32 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:confetti-minimalistic-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Attributes </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarAttributes">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="attributes-list.html">
+                  <Link className="sub-nav-link" to="attributes-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="attributes-edit.html">
+                  <Link className="sub-nav-link" to="attributes-edit">
                     Edit
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="attributes-add.html">
+                  <Link className="sub-nav-link" to="attributes-add">
                     Create
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarInvoice"
+              to="#sidebarInvoice"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -295,52 +291,52 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:bill-list-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Invoices </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarInvoice">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="invoice-list.html">
+                  <Link className="sub-nav-link" to="invoice-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="invoice-details.html">
+                  <Link className="sub-nav-link" to="invoice-details">
                     Details
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="invoice-add.html">
+                  <Link className="sub-nav-link" to="invoice-add">
                     Create
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="settings.html">
+            <Link className="nav-link" to="settings">
               <span className="nav-icon">
                 <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Settings </span>
-            </a>
+            </Link>
           </li>
 
           <li className="menu-title mt-2">Users</li>
 
           <li className="nav-item">
-            <a className="nav-link" href="pages-profile.html">
+            <Link className="nav-link" to="pages-profile">
               <span className="nav-icon">
                 <iconify-icon icon="solar:chat-square-like-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Profile </span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarRoles"
+              to="#sidebarRoles"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -350,24 +346,24 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:user-speak-rounded-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Roles </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarRoles">
               <ul className="nav sub-navbar-nav">
                 <ul className="nav sub-navbar-nav">
                   <li className="sub-nav-item">
-                    <a className="sub-nav-link" href="role-list.html">
+                    <Link className="sub-nav-link" to="role-list">
                       List
-                    </a>
+                    </Link>
                   </li>
                   <li className="sub-nav-item">
-                    <a className="sub-nav-link" href="role-edit.html">
+                    <Link className="sub-nav-link" to="role-edit">
                       Edit
-                    </a>
+                    </Link>
                   </li>
                   <li className="sub-nav-item">
-                    <a className="sub-nav-link" href="role-add.html">
+                    <Link className="sub-nav-link" to="role-add">
                       Create
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </ul>
@@ -375,18 +371,18 @@ const SidebarMenu = () => {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="pages-permissions.html">
+            <Link className="nav-link" to="pages-permissions">
               <span className="nav-icon">
                 <iconify-icon icon="solar:checklist-minimalistic-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Permissions </span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarCustomers"
+              to="#sidebarCustomers"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -396,27 +392,27 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:users-group-two-rounded-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Customers </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarCustomers">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="customer-list.html">
+                  <Link className="sub-nav-link" to="customer-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="customer-detail.html">
+                  <Link className="sub-nav-link" to="customer-detail">
                     Details
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarSellers"
+              to="#sidebarSellers"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -426,28 +422,28 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:shop-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Sellers </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarSellers">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="seller-list.html">
+                  <Link className="sub-nav-link" to="seller-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="seller-details.html">
+                  <Link className="sub-nav-link" to="seller-details">
                     Details
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="seller-edit.html">
+                  <Link className="sub-nav-link" to="seller-edit">
                     Edit
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="seller-add.html">
+                  <Link className="sub-nav-link" to="seller-add">
                     Create
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -456,9 +452,9 @@ const SidebarMenu = () => {
           <li className="menu-title mt-2">Other</li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarCoupons"
+              to="#sidebarCoupons"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -468,105 +464,105 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:leaf-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Coupons </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarCoupons">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="coupons-list.html">
+                  <Link className="sub-nav-link" to="coupons-list">
                     List
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="coupons-add.html">
+                  <Link className="sub-nav-link" to="coupons-add">
                     Add
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="pages-review.html">
+            <Link className="nav-link" to="pages-review">
               <span className="nav-icon">
                 <iconify-icon icon="solar:chat-square-like-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Reviews </span>
-            </a>
+            </Link>
           </li>
 
           <li className="menu-title mt-2">Other Apps</li>
 
           <li className="nav-item">
-            <a className="nav-link" href="apps-chat.html">
+            <Link className="nav-link" to="apps-chat">
               <span className="nav-icon">
                 <iconify-icon icon="solar:chat-round-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Chat </span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="apps-email.html">
+            <Link className="nav-link" to="apps-email">
               <span className="nav-icon">
                 <iconify-icon icon="solar:mailbox-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Email </span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="apps-calendar.html">
+            <Link className="nav-link" to="apps-calendar">
               <span className="nav-icon">
                 <iconify-icon icon="solar:calendar-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Calendar </span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="apps-todo.html">
+            <Link className="nav-link" to="apps-todo">
               <span className="nav-icon">
                 <iconify-icon icon="solar:checklist-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Todo </span>
-            </a>
+            </Link>
           </li>
 
           <li className="menu-title mt-2">Support</li>
 
           <li className="nav-item">
-            <a className="nav-link" href="help-center.html">
+            <Link className="nav-link" to="help-center">
               <span className="nav-icon">
                 <iconify-icon icon="solar:help-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Help Center </span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="pages-faqs.html">
+            <Link className="nav-link" to="pages-faqs">
               <span className="nav-icon">
                 <iconify-icon icon="solar:question-circle-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> FAQs </span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="privacy-policy.html">
+            <Link className="nav-link" to="privacy-policy">
               <span className="nav-icon">
                 <iconify-icon icon="solar:document-text-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Privacy Policy </span>
-            </a>
+            </Link>
           </li>
 
           <li className="menu-title mt-2">Custom</li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarPages"
+              to="#sidebarPages"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -576,52 +572,52 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:gift-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Pages </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarPages">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="pages-starter.html">
+                  <Link className="sub-nav-link" to="pages-starter">
                     Welcome
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="pages-comingsoon.html">
+                  <Link className="sub-nav-link" to="pages-comingsoon">
                     Coming Soon
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="pages-timeline.html">
+                  <Link className="sub-nav-link" to="pages-timeline">
                     Timeline
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="pages-pricing.html">
+                  <Link className="sub-nav-link" to="pages-pricing">
                     Pricing
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="pages-maintenance.html">
+                  <Link className="sub-nav-link" to="pages-maintenance">
                     Maintenance
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="pages-404.html">
+                  <Link className="sub-nav-link" to="pages-404">
                     404 Error
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="pages-404-alt.html">
+                  <Link className="sub-nav-link" to="pages-404-alt">
                     404 Error (alt)
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarAuthentication"
+              to="#sidebarAuthentication"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -631,49 +627,49 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:lock-keyhole-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Authentication </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarAuthentication">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="auth-signin.html">
+                  <Link className="sub-nav-link" to="auth-signin">
                     Sign In
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="auth-signup.html">
+                  <Link className="sub-nav-link" to="auth-signup">
                     Sign Up
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="auth-password.html">
+                  <Link className="sub-nav-link" to="auth-password">
                     Reset Password
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="auth-lock-screen.html">
+                  <Link className="sub-nav-link" to="auth-lock-screen">
                     Lock Screen
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="widgets.html">
+            <Link className="nav-link" to="widgets">
               <span className="nav-icon">
                 <iconify-icon icon="solar:atom-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text">Widgets</span>
               <span className="badge bg-info badge-pill text-end">9+</span>
-            </a>
+            </Link>
           </li>
 
           <li className="menu-title mt-2">Components</li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarBaseUI"
+              to="#sidebarBaseUI"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -683,127 +679,127 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:bookmark-square-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Base UI </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarBaseUI">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-accordion.html">
+                  <Link className="sub-nav-link" to="ui-accordion">
                     Accordion
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-alerts.html">
+                  <Link className="sub-nav-link" to="ui-alerts">
                     Alerts
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-avatar.html">
+                  <Link className="sub-nav-link" to="ui-avatar">
                     Avatar
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-badge.html">
+                  <Link className="sub-nav-link" to="ui-badge">
                     Badge
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-breadcrumb.html">
+                  <Link className="sub-nav-link" to="ui-breadcrumb">
                     Breadcrumb
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-buttons.html">
+                  <Link className="sub-nav-link" to="ui-buttons">
                     Buttons
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-card.html">
+                  <Link className="sub-nav-link" to="ui-card">
                     Card
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-carousel.html">
+                  <Link className="sub-nav-link" to="ui-carousel">
                     Carousel
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-collapse.html">
+                  <Link className="sub-nav-link" to="ui-collapse">
                     Collapse
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-dropdown.html">
+                  <Link className="sub-nav-link" to="ui-dropdown">
                     Dropdown
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-list-group.html">
+                  <Link className="sub-nav-link" to="ui-list-group">
                     List Group
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-modal.html">
+                  <Link className="sub-nav-link" to="ui-modal">
                     Modal
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-tabs.html">
+                  <Link className="sub-nav-link" to="ui-tabs">
                     Tabs
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-offcanvas.html">
+                  <Link className="sub-nav-link" to="ui-offcanvas">
                     Offcanvas
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-pagination.html">
+                  <Link className="sub-nav-link" to="ui-pagination">
                     Pagination
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-placeholders.html">
+                  <Link className="sub-nav-link" to="ui-placeholders">
                     Placeholders
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-popovers.html">
+                  <Link className="sub-nav-link" to="ui-popovers">
                     Popovers
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-progress.html">
+                  <Link className="sub-nav-link" to="ui-progress">
                     Progress
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-scrollspy.html">
+                  <Link className="sub-nav-link" to="ui-scrollspy">
                     Scrollspy
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-spinners.html">
+                  <Link className="sub-nav-link" to="ui-spinners">
                     Spinners
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-toasts.html">
+                  <Link className="sub-nav-link" to="ui-toasts">
                     Toasts
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="ui-tooltips.html">
+                  <Link className="sub-nav-link" to="ui-tooltips">
                     Tooltips
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarExtendedUI"
+              to="#sidebarExtendedUI"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -813,45 +809,42 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:case-round-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Advanced UI </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarExtendedUI">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="extended-ratings.html">
+                  <Link className="sub-nav-link" to="extended-ratings">
                     Ratings
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="extended-sweetalert.html">
+                  <Link className="sub-nav-link" to="extended-sweetalert">
                     Sweet Alert
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a
-                    className="sub-nav-link"
-                    href="extended-swiper-silder.html"
-                  >
+                  <Link className="sub-nav-link" to="extended-swiper-silder">
                     Swiper Slider
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="extended-scrollbar.html">
+                  <Link className="sub-nav-link" to="extended-scrollbar">
                     Scrollbar
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="extended-toastify.html">
+                  <Link className="sub-nav-link" to="extended-toastify">
                     Toastify
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarCharts"
+              to="#sidebarCharts"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -861,103 +854,97 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:pie-chart-2-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Charts </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarCharts">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-area.html">
+                  <Link className="sub-nav-link" to="charts-apex-area">
                     Area
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-bar.html">
+                  <Link className="sub-nav-link" to="charts-apex-bar">
                     Bar
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-bubble.html">
+                  <Link className="sub-nav-link" to="charts-apex-bubble">
                     Bubble
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a
-                    className="sub-nav-link"
-                    href="charts-apex-candlestick.html"
-                  >
+                  <Link className="sub-nav-link" to="charts-apex-candlestick">
                     Candlestick
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-column.html">
+                  <Link className="sub-nav-link" to="charts-apex-column">
                     Column
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-heatmap.html">
+                  <Link className="sub-nav-link" to="charts-apex-heatmap">
                     Heatmap
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-line.html">
+                  <Link className="sub-nav-link" to="charts-apex-line">
                     Line
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-mixed.html">
+                  <Link className="sub-nav-link" to="charts-apex-mixed">
                     Mixed
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-timeline.html">
+                  <Link className="sub-nav-link" to="charts-apex-timeline">
                     Timeline
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-boxplot.html">
+                  <Link className="sub-nav-link" to="charts-apex-boxplot">
                     Boxplot
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-treemap.html">
+                  <Link className="sub-nav-link" to="charts-apex-treemap">
                     Treemap
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-pie.html">
+                  <Link className="sub-nav-link" to="charts-apex-pie">
                     Pie
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-radar.html">
+                  <Link className="sub-nav-link" to="charts-apex-radar">
                     Radar
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-radialbar.html">
+                  <Link className="sub-nav-link" to="charts-apex-radialbar">
                     RadialBar
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="charts-apex-scatter.html">
+                  <Link className="sub-nav-link" to="charts-apex-scatter">
                     Scatter
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a
-                    className="sub-nav-link"
-                    href="charts-apex-polar-area.html"
-                  >
+                  <Link className="sub-nav-link" to="charts-apex-polar-area">
                     Polar Area
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarForms"
+              to="#sidebarForms"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -967,72 +954,72 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:book-bookmark-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Forms </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarForms">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-basic.html">
+                  <Link className="sub-nav-link" to="forms-basic">
                     Basic Elements
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-checkbox-radio.html">
+                  <Link className="sub-nav-link" to="forms-checkbox-radio">
                     Checkbox &amp; Radio
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-choices.html">
+                  <Link className="sub-nav-link" to="forms-choices">
                     Choice Select
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-clipboard.html">
+                  <Link className="sub-nav-link" to="forms-clipboard">
                     Clipboard
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-flatepicker.html">
+                  <Link className="sub-nav-link" to="forms-flatepicker">
                     Flatepicker
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-validation.html">
+                  <Link className="sub-nav-link" to="forms-validation">
                     Validation
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-wizard.html">
+                  <Link className="sub-nav-link" to="forms-wizard">
                     Wizard
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-fileuploads.html">
+                  <Link className="sub-nav-link" to="forms-fileuploads">
                     File Upload
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-editors.html">
+                  <Link className="sub-nav-link" to="forms-editors">
                     Editors
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-input-mask.html">
+                  <Link className="sub-nav-link" to="forms-input-mask">
                     Input Mask
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="forms-range-slider.html">
+                  <Link className="sub-nav-link" to="forms-range-slider">
                     Slider
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarTables"
+              to="#sidebarTables"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -1042,27 +1029,27 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:tuning-2-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Tables </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarTables">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="tables-basic.html">
+                  <Link className="sub-nav-link" to="tables-basic">
                     Basic Tables
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="tables-gridjs.html">
+                  <Link className="sub-nav-link" to="tables-gridjs">
                     Grid Js
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarIcons"
+              to="#sidebarIcons"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -1072,27 +1059,27 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:ufo-2-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Icons </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarIcons">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="icons-boxicons.html">
+                  <Link className="sub-nav-link" to="icons-boxicons">
                     Boxicons
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="icons-solar.html">
+                  <Link className="sub-nav-link" to="icons-solar">
                     Solar Icons
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarMaps"
+              to="#sidebarMaps"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -1102,37 +1089,37 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:streets-map-point-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Maps </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarMaps">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="maps-google.html">
+                  <Link className="sub-nav-link" to="maps-google">
                     Google Maps
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="maps-vector.html">
+                  <Link className="sub-nav-link" to="maps-vector">
                     Vector Maps
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="javascript:void(0);">
+            <Link className="nav-link" to="javascript:void(0);">
               <span className="nav-icon">
                 <iconify-icon icon="solar:volleyball-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text">Badge Menu</span>
               <span className="badge bg-danger badge-pill text-end">1</span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link menu-arrow"
-              href="#sidebarMultiLevelDemo"
+              to="#sidebarMultiLevelDemo"
               data-bs-toggle="collapse"
               role="button"
               aria-expanded="false"
@@ -1142,31 +1129,31 @@ const SidebarMenu = () => {
                 <iconify-icon icon="solar:share-circle-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Menu Item </span>
-            </a>
+            </Link>
             <div className="collapse" id="sidebarMultiLevelDemo">
               <ul className="nav sub-navbar-nav">
                 <li className="sub-nav-item">
-                  <a className="sub-nav-link" href="javascript:void(0);">
+                  <Link className="sub-nav-link" to="javascript:void(0);">
                     Menu Item 1
-                  </a>
+                  </Link>
                 </li>
                 <li className="sub-nav-item">
-                  <a
+                  <Link
                     className="sub-nav-link menu-arrow"
-                    href="#sidebarItemDemoSubItem"
+                    to="#sidebarItemDemoSubItem"
                     data-bs-toggle="collapse"
                     role="button"
                     aria-expanded="false"
                     aria-controls="sidebarItemDemoSubItem"
                   >
                     <span> Menu Item 2 </span>
-                  </a>
+                  </Link>
                   <div className="collapse" id="sidebarItemDemoSubItem">
                     <ul className="nav sub-navbar-nav">
                       <li className="sub-nav-item">
-                        <a className="sub-nav-link" href="javascript:void(0);">
+                        <Link className="sub-nav-link" to="javascript:void(0);">
                           Menu Sub item
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -1176,12 +1163,12 @@ const SidebarMenu = () => {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link disabled" href="javascript:void(0);">
+            <Link className="nav-link disabled" to="javascript:void(0);">
               <span className="nav-icon">
                 <iconify-icon icon="solar:user-block-rounded-bold-duotone"></iconify-icon>
               </span>
               <span className="nav-text"> Disable Item </span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
