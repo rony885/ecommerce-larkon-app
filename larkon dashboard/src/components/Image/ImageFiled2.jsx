@@ -31,13 +31,13 @@ const ImageFiled2 = () => {
     <>
       <form className="dropzone" encType="multipart/form-data">
         {/* Hidden file input */}
-        <input
+        {/* <input
           type="file"
           accept="image/png, image/jpeg, image/gif"
           style={{ display: "none" }}
           ref={fileInputRef}
           onChange={handleFileChange}
-        />
+        /> */}
 
         {/* Upload Area (only if no preview) */}
         {!preview2 && (
