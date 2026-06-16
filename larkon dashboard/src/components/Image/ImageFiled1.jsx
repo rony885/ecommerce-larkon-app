@@ -95,7 +95,6 @@ const ImageFiled1 = () => {
                     borderRadius: "5px",
                   }}
                 />
-      {/* Rony */}
                 <button
                   type="button"
                   onClick={handleDelete}
