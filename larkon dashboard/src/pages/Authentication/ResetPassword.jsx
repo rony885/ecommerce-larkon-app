@@ -38,7 +38,7 @@ const ResetPassword = () => {
                   <div>
                     <form className="authentication-form">
                       <div className="mb-3">
-                        <label className="form-label" for="example-email">
+                        <label className="form-label" htmlFor="example-email">
                           Email
                         </label>
                         <input
@@ -59,12 +59,9 @@ const ResetPassword = () => {
 
                   <p className="mt-5 text-danger text-center">
                     Back to
-                    <a
-                      href="auth-signin.html"
-                      className="text-dark fw-bold ms-1"
-                    >
+                    <Link to="/sign-in" className="text-dark fw-bold ms-1">
                       Sign In
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -75,7 +72,7 @@ const ResetPassword = () => {
             <div className="card h-100 mb-0 overflow-hidden">
               <div className="d-flex flex-column h-100">
                 <img
-                  src="assets/images/small/img-10.jpg"
+                  src="/assets/images/small/img-10.jpg"
                   alt=""
                   className="w-100 h-100"
                 />

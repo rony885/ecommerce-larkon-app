@@ -58,7 +58,7 @@ const Header = ({ handleTogglle, c_user, logoutUser }) => {
             {/* <!-- Menu Toggle Button --> */}
             <div className="topbar-item">
               <h4 className="fw-bold topbar-button pe-none text-uppercase mb-0">
-                Welcome!
+                Welcome to Larkon!
               </h4>
             </div>
           </div>
@@ -275,7 +275,7 @@ const Header = ({ handleTogglle, c_user, logoutUser }) => {
                     className="rounded-circle"
                     width="32"
                     // src="/assets/images/users/avatar-1.jpg"
-                      src={c_user?.image || "/assets/images/users/avatar-1.jpg"}
+                    src={c_user?.image || "/assets/images/users/avatar-1.jpg"}
                     alt="avatar-3"
                   />
                 </span>
@@ -333,10 +333,10 @@ const Header = ({ handleTogglle, c_user, logoutUser }) => {
                   onClick={() => {
                     logoutUser();
                     localStorage.removeItem(
-                      "ecommerceSuperuserandstaffAccessToken"
+                      "ecommerceSuperuserandstaffAccessToken",
                     );
                     localStorage.removeItem(
-                      "ecommerceSuperuserandstaffRefreshToken"
+                      "ecommerceSuperuserandstaffRefreshToken",
                     );
                     navigate("/");
                     window.location.reload(false);
