@@ -171,7 +171,7 @@ const OrderDetails = () => {
                               <div className="d-flex align-items-center gap-2">
                                 <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                   <img
-                                    src="assets/images/product/p-1.png"
+                                    src="/assets/images/product/p-1.png"
                                     alt=""
                                     className="avatar-md"
                                   />
@@ -276,7 +276,7 @@ const OrderDetails = () => {
                               <div className="d-flex align-items-center gap-2">
                                 <div className="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
                                   <img
-                                    src="assets/images/product/p-10.png"
+                                    src="/assets/images/product/p-10.png"
                                     alt=""
                                     className="avatar-md"
                                   />
@@ -609,7 +609,7 @@ const OrderDetails = () => {
                 <div className="d-flex align-items-center gap-3 mb-3">
                   <div className="rounded-3 bg-light avatar d-flex align-items-center justify-content-center">
                     <img
-                      src="assets/images/card/mastercard.svg"
+                      src="/assets/images/card/mastercard.svg"
                       alt=""
                       className="avatar-sm"
                     />
@@ -648,7 +648,7 @@ const OrderDetails = () => {
               <div className="card-body">
                 <div className="d-flex align-items-center gap-2">
                   <img
-                    src="assets/images/users/avatar-1.jpg"
+                    src="/assets/images/users/avatar-1.jpg"
                     alt=""
                     className="avatar rounded-3 border border-light border-3"
                   />
