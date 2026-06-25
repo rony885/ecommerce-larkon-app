@@ -215,8 +215,8 @@ const Blog = () => {
                     </tbody>
                   </table>
                 </div>
-                {/* <!-- end table-responsive --> */}
               </div>
+
               <div className="card-footer border-top">
                 <nav aria-label="Page navigation example">
                   <ul className="pagination justify-content-end mb-0">

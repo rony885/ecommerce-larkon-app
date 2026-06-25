@@ -60,10 +60,7 @@ const LockScreen = () => {
 
                   <p className="text-danger text-center">
                     Not you? return
-                    <Link
-                      to="/sign-up"
-                      className="text-dark fw-bold ms-1"
-                    >
+                    <Link to="/sign-up" className="text-dark fw-bold ms-1">
                       Sign Up
                     </Link>
                   </p>
@@ -76,7 +73,7 @@ const LockScreen = () => {
             <div className="card h-100 mb-0 overflow-hidden">
               <div className="d-flex flex-column h-100">
                 <img
-                  src="assets/images/small/img-10.jpg"
+                  src="/assets/images/small/img-10.jpg"
                   alt=""
                   className="w-100 h-100"
                 />
